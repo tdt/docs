@@ -3,8 +3,6 @@
 This repository holds a Laravel based website that contains all of the documentation for the datatank packages starting from version 4.0.
 The pages are all created in markdown this makes it so that anyone can adjust the documentation where he sees fit.
 
-- - -
-
 ## Installation
 
 ### Composer

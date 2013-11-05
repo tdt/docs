@@ -1,13 +1,12 @@
 - Preface
-    - [Introduction](/4/introduction)
-    - [Contributing](/4/contributing)
+    - [Introduction](/4.0/introduction)
 - Getting Started
-    - [Packages](/4/packages)
-    - [Installation](/4/installation)
-    - [Configuration](/4/configuration)
+    - [Installation](/4.0/installation)
+    - [Packages](/4.0/packages)
+    - [Configuration](/4.0/configuration)
 - Publishing data
-    - [Basics](/4/basics)
+    - [Basics](/4.0/publishing_basics)
 - Consuming data
-    - [Basic Usage](/4/database)
+    - [Basic Usage](/4.0/consuming_data)
 - CLI
-    - [Overview](/4/cli)
+    - [Overview](/4.0/cli)
