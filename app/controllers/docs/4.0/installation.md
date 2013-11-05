@@ -1,10 +1,9 @@
 # Installation
 
-On this page you will learn how to
+On this page you will learn
 
-* what the system requirements are(#requirements)
-* install a datatank instance(#installation)
-* the additional input package(#input)
+* [what the system requirements are](#requirements)
+* [how to install a datatank](#installation)
 
 <a name="requirements"></a>
 ## System Requirements
@@ -13,7 +12,7 @@ The DataTank requires a server with
 
 * Apache2 or Nginx
 * mod rewrite enabled
-* PHP 5.3+, preferbly 5.4
+* PHP 5.3+, preferably| 5.4
 * Any database supported by [Laravel 4](http://four.laravel.com/docs/database)
 
 If you're using a <strong>Unix</strong> system, the easiest way to meet these requirements is to perform the following commands:
@@ -28,11 +27,13 @@ If you're using a <strong>Windows</strong> system, you'll have to download a web
 
 ### Command line
 
-An installation through the command line requires the installation of [composer](http://getcomposer.org/)
+An installation through the command line requires the installation of [composer](http://getcomposer.org/).
+
+To install the latest version execute the following commands
+
+    $ composer create-project tdt/docs
+    $ composer update
 
 ### UI
 
 Work in progress.
-
-<a name="input"></a>
-## The input package

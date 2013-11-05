@@ -1,9 +1,9 @@
 - Preface
     - [Introduction](/4.0/introduction)
+    - [Blue prints](/4.0/blueprints)
 - Getting Started
     - [Installation](/4.0/installation)
-    - [Packages](/4.0/packages)
-    - [Configuration](/4.0/configuration)
+    - [Input](/4.0/input)
 - Publishing data
     - [Basics](/4.0/publishing_basics)
 - Consuming data

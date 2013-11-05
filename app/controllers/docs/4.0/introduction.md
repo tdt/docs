@@ -1,10 +1,11 @@
 # Introduction
 
-On this page you will learn:
+On this page you will learn
 
-* what The DataTank is
-* how it works
+* [what The DataTank is](#what)
+* [how it works](#how)
 
+<a name="what"></a>
 ## What is The DataTank?
 
 The DataTank is an open source tool that aims at publishing data. These data can be stored in text based files such as CSV, XML and JSON or in binary structures such as SHP and relational databases. The DataTank will read the data in a generic way and publish it on the web to a given URI. It can then provide these data in any format the user wants, no matter what the original datastructure was. Furthermore, it can also semantify your data so that it can be a part of the semantic web.
@@ -15,6 +16,7 @@ Check out our video below for more information.
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/3QMpd0BW7bU" frameborder="0" allowfullscreen></iframe>
 
+<a name="how"></a>
 ## How does it work?
 
 This section will explain, on a high-level, how The DataTank works, and what the common terms are we used throughout our documentation.
