@@ -3,10 +3,14 @@
     - [Blue prints](/4.0/blueprints)
 - Getting Started
     - [Installation](/4.0/installation)
-    - [Input](/4.0/input)
+    - [Configuration](/4.0/configuration)
 - Publishing data
     - [Basics](/4.0/publishing_basics)
 - Consuming data
     - [Basic Usage](/4.0/consuming_data)
 - CLI
     - [Overview](/4.0/cli)
+- Input
+	- [Introduction](/4.0/input)
+	- [Installation](/4.0/input_installation)
+	- [Usage](/4.0/input_usage)
