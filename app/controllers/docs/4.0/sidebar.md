@@ -4,8 +4,11 @@
 - Getting Started
     - [Installation](/4.0/installation)
     - [Configuration](/4.0/configuration)
-- Publishing data
-    - [Basics](/4.0/publishing_basics)
+- Resource Definitions
+    - [Create](/4.0/create_definition)
+    - [Read](/4.0/rud_definition#get)
+    - [Delete](/4.0/rud_definition#delete)
+    - [Update](/4.0/rud_definition#patch)
 - Consuming data
     - [Basic Usage](/4.0/consuming_data)
 - CLI

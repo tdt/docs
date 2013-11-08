@@ -1,13 +1,13 @@
-# Publishing data
+# Create a resource definition
 
 On this page you will learn
 
-* [how to publish a dataset](#publish)
+* [how to create a definition](#publish)
 
 <a name="publish"></a>
 ## Adding a resource
 
-Our core functionality is to extract data from a certain data structure and provide this content to the user using HTTP. As described in our introduction pages, in order to extract data we need some meta-data telling us how to do that.
+Our core functionality is to extract data from a certain data structure and provide this content to the user using HTTP. As described in our introduction pages, in order to extract data we need some meta-data telling us how to do that. This set of meta-data is called a resource definition, or - shorter - definition.
 
 What follows is a list of steps a maintainer of a datatank has to take in order to create a new definition so that data can be published from a certain data file. This small tutorial assumes that a datatank is hosted on http://foo and explains all the basics of the discovery document. A fair bit of reading, but essential nonetheless!
 
@@ -20,7 +20,7 @@ The discovery document shows a list of methods that one can perform on the resou
 <pre class="prettyprint pre-scrollable linenums">
 {
     "protocol": "rest",
-    "rootUrl": "http://tdt.be",
+    "rootUrl": "http://foo",
     "resources": {
         "definitions": {
             "methods": {
@@ -182,4 +182,7 @@ curl_setopt_array($ch, $options);
 $response = curl_exec($ch);
 </pre>
 
-Executing this script will lead to the addition of a resource definition, and will return a response in which the "Location"-header links to the actual retrieval uri of the data.
+Executing this script will lead to the addition of a resource definition, and will return a response in which the "Location"-header links to the actual retrieval uri of the data. This means that when you execute a put method, 2 things will happen:
+
+* a new resource definition will be added to the definitions resource
+* a uri identified by {identifier} will now return data extracted from the data source that the definition describes
