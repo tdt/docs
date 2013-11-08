@@ -11,8 +11,6 @@
     - [Update](/4.0/rud_definition#patch)
 - Consuming data
     - [Basic Usage](/4.0/consuming_data)
-- CLI
-    - [Overview](/4.0/cli)
 - Input
 	- [Introduction](/4.0/input)
 	- [Installation](/4.0/input_installation)

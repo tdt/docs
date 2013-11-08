@@ -11,16 +11,6 @@ The default out-of-the-box datatank provides the functionality to provide a 1-1 
 
 The functional analysis of this semantifying operation identifies 3 steps, namely the extraction of data, the mapping of data and the storage of the mapped data. In the datatank we've named this an extract-map-load sequence or eml. If you're a developer, you'll find a similar approach in our code.
 
-## Installation
+Because we're embedding this functionality as a package in our core application we can also publish our freshly new made semantic data (or whatever new data you produced using the input package). This can be done by configuring an optional 4th processing factor in the eml process. This last process is called the publish process and takes a set of variables needed to publish the result of the load process.
 
-Installation is fairly simple and can be done by adding the tdt/input package to the `require` section of the composer.json file. This file can be found in the root of your installation.
-The `require` section might look like this:
-
-    "require": {
-        ...,
-        "tdt/input" : "dev-master"
-    }
-
-After the composer.json changed, you need to let composer know that a new dependency has been added. The following command will download the input package:
-
-    $ composer update
+Each of the above described functionalities will further documented in the next secttions of input.
