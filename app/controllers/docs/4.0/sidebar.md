@@ -9,6 +9,7 @@
     - [Read](/4.0/rud_definition#get)
     - [Delete](/4.0/rud_definition#delete)
     - [Update](/4.0/rud_definition#patch)
+    - [Source types](/4.0/source_types)
 - Consuming data
     - [Basic Usage](/4.0/consuming_data)
 - Input
