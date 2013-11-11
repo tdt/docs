@@ -4,10 +4,15 @@
 - Getting Started
     - [Installation](/4.0/installation)
     - [Configuration](/4.0/configuration)
-- Publishing data
-    - [Definitions](/4.0/publishing_basics)
+- Resource Definitions
+    - [Create](/4.0/create_definition)
+    - [Read](/4.0/rud_definition#get)
+    - [Delete](/4.0/rud_definition#delete)
+    - [Update](/4.0/rud_definition#patch)
+    - [Source types](/4.0/source_types)
 - Consuming data
     - [Basic Usage](/4.0/consuming_data)
-- Semantifying data
-- Datatank tools
-    - [Overview](/4.0/cli)
+- Input
+	- [Introduction](/4.0/input)
+	- [Installation](/4.0/input_installation)
+	- [Usage](/4.0/input_usage)

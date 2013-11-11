@@ -12,7 +12,7 @@ The DataTank requires a server with
 
 * Apache2 or Nginx
 * mod rewrite enabled
-* PHP 5.3+, preferably| 5.4
+* PHP 5.3+, preferably 5.4
 * Any database supported by [Laravel 4](http://four.laravel.com/docs/database)
 
 If you're using a <strong>Unix</strong> system, the easiest way to meet these requirements is to perform the following commands:
@@ -29,11 +29,16 @@ If you're using a <strong>Windows</strong> system, you'll have to download a web
 
 An installation through the command line requires the installation of [composer](http://getcomposer.org/).
 
-To install the latest version execute the following commands
+#### Install core
+
+To install the latest version of core execute the following commands
+
+    $ composer create-project tdt/core
+    $ composer update
+
+#### Install docs
+
+To install the latest version of our documentation execute the following commands
 
     $ composer create-project tdt/docs
     $ composer update
-
-### UI
-
-Work in progress.
