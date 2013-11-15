@@ -1,4 +1,4 @@
-# Installation
+# Input installation
 
 The installation is fairly simple and can be done by telling the core application that tdt/input is now a required package. This can be done by updating the require section of the composer.json file, located in your root application folder.
 
@@ -28,7 +28,7 @@ This means that you don't need to include it in your composer.json file but rath
 	$ cd workbench
 	$ git clone git@github.com:tdt/input.git
 
-In order to migrate the workbench package, execute the following command:
+In order to migrate the workbench package (given that the directory in which input is cloned into is called input), execute the following command:
 
 	$ php artisan migrate --bench=input
 

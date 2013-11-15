@@ -3,8 +3,8 @@
 In this section you will learn
 
 * [the functionality of input](#functionality)
-* [how to add it to your datatank instance](#include)
 
+<a name="functionality"></a>
 ## Functionality
 
 The default out-of-the-box datatank provides the functionality to provide a 1-1 translation and publication of data to a web URI. However, in order to move up the [open data ladder](http://5stardata.info/) we need to be able to add context to data. This can be done by adding semantics to the data and storing them in data structures that support storing semantic data.
