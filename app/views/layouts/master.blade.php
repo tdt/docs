@@ -1,5 +1,6 @@
 <html>
 <head>
+    <title>The DataTank documentation</title>
     <link href="<?php echo \Request::root() . '/assets/css/bootstrap.min.css'; ?>" rel="stylesheet" media="screen">
     <link href="<?php echo \Request::root() . '/assets/css/docs.css'; ?>" rel="stylesheet" media="screen">
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>

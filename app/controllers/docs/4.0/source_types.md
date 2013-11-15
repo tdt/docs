@@ -189,7 +189,7 @@ $options = array(
     CURLOPT_RETURNTRANSFER => 1,
     CURLOPT_FORBID_REUSE => 1,
     CURLOPT_TIMEOUT => 4,
-    CURLOPT_POSTFIELDS => http_build_query($put),
+    CURLOPT_POSTFIELDS => json_encode($put),
     CURLOPT_HTTPHEADER => array("Content-Type: application/tdt.installed"),
 );
 
