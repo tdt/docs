@@ -14,5 +14,4 @@
     - [Basic Usage](/4.0/consuming_data)
 - Input
 	- [Introduction](/4.0/input)
-	- [Installation](/4.0/input_installation)
 	- [Usage](/4.0/input_usage)

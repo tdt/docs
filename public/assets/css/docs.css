@@ -3,17 +3,33 @@ h1 {
   font-size: 1.8em;
 }
 
+h2 {
+  margin: 0.67em 0;
+  font-size: 1.6em;
+}
+
+h3 {
+  margin: 0.67em 0;
+  font-size: 1.4em;
+}
+
+h4 {
+  margin: 0.67em 0;
+  font-size: 1.2em;
+}
+
 header {
   border-bottom: 1px solid #eee;
   margin-bottom: 2em;
 }
 
-ul {
+.sidebar > ul {
     list-style-type: none;
     margin: 0;
     padding: 0
 }
-ul ul {
+
+.sidebar > ul ul {
     list-style-type: none;
     margin: 1em 0;
     padding: 0 0 0 1.5em
