@@ -1,5 +1,13 @@
 # Consuming data
 
+On this page you will learn how you can
+
+* [request data from The DataTank](#request)
+* [notes about certain source types](#notes)
+
+<a name='request'></a>
+## Requesting data
+
 The DataTank makes data available through a REST interface. This means that data extracted from a certain data structure is available through HTTP. Just as any other operation of functionality, the discovery document shows us where to go!
 
 <pre class="prettyprint linenums">
@@ -47,3 +55,29 @@ As you can see every entry has a description that is retrieved from the definiti
 
 This is all you need to know in order to get a glimp of what datasources are available and on which uri they are retrievable.
 
+<a name='notes'></a>
+## Notes
+
+There are some side-notes to be made with the requesting of data be it in certain formats, or from certain source types.
+
+### XML format
+
+If you request data in an xml format, do note that xml has a few flaws in its design and specification. One of them is the prohibition of the first character of a tag name being an integer according to the [XML spec](http://www.w3.org/TR/REC-xml/#NT-Name). Therefore if properties (column names in a CSV file for example) are integers, the XML will be 'malformed', but will still be made nonetheless. Note that column names that contain whitespace will also be concatenated with an underscore since XML does not take whitespaced tag names.
+
+### SHP source type
+
+Currently we store geo properties in the back-end as meta-data information so that formatters can use this information to provide more visual information (e.g. map formatter). There currently is 1 inhibition considering the SHP publisher, namely it can take only 1 type of shape. We have noticed that the shape files currently available on several open data portals (Germany, Italy, ...) all use 1 type of shape type in their binary structure be it a set of points, multi-lines, polygons, etc. If we encounter however a lot of instances where a variety of shapes is used, we'll probably opt to calculate the type of the shape a row represents in the SHP file on the fly.
+
+### SPARQL source type
+
+The SPARQL source type can take a query as a parameter, and can even contain parameters inside the query itself which can then be filled in. If our query were to be the following:
+
+<pre class='prettyprint'>
+    query = 'SELECT * from { GRAPH <${graph_name}> { ?s ?p ?o }}'
+</pre>
+
+and it was published on a link http://foo/sparql/bar, you would get a 400 error telling you that the request failed and there might be be a chance that you have to pass along a parameter, which is the case here.
+
+So, in order to fill in the ${graph_name} part of the SPARQL query, you have to pass along a key - value pair in the query string of the request e.g. http://foo/sparql/bar.json?graph_name=foo_graph .
+
+This value will be replaced on a 1-1 raw basis. A very important caveat to mention here is that when you happen to find yourself in a situation where you have to pass a hash tag along as a value of a request parameter you'll have to url encode (# = %23) it, and replace that in your query string e.g. http://foo/sparql/bar.json/graph_name=foo_graph%23posthashtag
