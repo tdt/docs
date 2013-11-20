@@ -12,6 +12,7 @@
     - [Source types](/4.0/source_types)
 - Consuming data
     - [Basic Usage](/4.0/consuming_data)
+    - [Notes](/4.0/notes)
 - Input
 	- [Introduction](/4.0/input)
 	- [Usage](/4.0/input_usage)

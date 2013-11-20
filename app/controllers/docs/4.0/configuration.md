@@ -4,6 +4,7 @@ On this page you will learn how to configure the application for
 
 * [production purposes](#production)
 * [development purposes](#development)
+* [unit testing](#unittesting)
 
 The configuration is entirely handled by the Laravel framework, if you encounter things that aren't covered on this page, visit the [Laravel configuration documentation](http://four.laravel.com/docs/configuration) or if that doesn't help you out, get in touch by e-mail or github.
 
@@ -74,3 +75,32 @@ That's all there is to it!
 ## Development
 
 If you're planning on developping The DataTank, you'll need to read up on how to configure environments in the [Laravel configuration documentation](http://four.laravel.com/docs/configuration#environment-configuration). To summarize this, in order to load your database for development (e.g. localhost) only, you need to create a folder called <em>local</em> in the <em>app/config</em> folder, and make sure the environment is recognized by Laravel. This is done by adding your host name to the <em>$env</em> variable in the <em>bootstrap/start.php</em> file. Don't forget to add this file to the .gitignore.
+
+<a name='unittesting'></a>
+## Unit testing
+
+If you want to run the unittests, to check if everything is still ok after adjustments, or to test your own additional tests, go to the root of the application and perform the simple command:
+
+    $ phpunit
+
+This will execute all of the tests located at the <em>app/tests</em> folder.
+
+If you've never performed the unit tests before, you will probably stumble upon a large series of errors. This is because the testing environment hasn't been configured yet. It is however fairly simple to do such a thing, so bare with us!
+
+First you'll need to create a database table that will be used by the unit tests. This can be configured in the <em>database.php</em> file inside the <em>app/config/testing</em> folder. Next you'll want to create the necessary tables in order to create a similar back-end as the application uses, in order to do this you'll need to perform the migration command, but with the testing environment as a parameter.
+
+    $ php artisan migrate --env=testing
+
+Next up, you'll have to migrate the extra package that we use for authentication purposes as well:
+
+    $ php artisan migrate --env=testing --package=cartalyst/sentry
+
+After that, fill up the database with some basic users using our seeder:
+
+    $ php artisan db:seed --env=testing --class=UserSeeder
+
+That's it! You can perform the phpunit command now, and see the tests at work.
+
+
+
+
