@@ -20,7 +20,7 @@
             </a>
         </nav>
 
-        <div id='sidebar-background'></div>
+        <div id='sidebar-background' class='hidden-xs hidden-sm'></div>
 
         <div class="wrapper">
             <div class='row'>
