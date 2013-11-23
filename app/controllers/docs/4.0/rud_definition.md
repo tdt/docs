@@ -1,4 +1,3 @@
-<a name="get"></a>
 # Read a definition
 
 The discovery document shows us that by performing a get method on the definitions resource we'll get a list of the defined definitions.

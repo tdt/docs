@@ -1,18 +1,18 @@
 - Preface
-    - [Introduction](/4.0/introduction)
-    - [Blue prints](/4.0/blueprints)
+    - [Introduction]({url}/introduction)
+    - [Blue prints]({url}/blueprints)
 - Getting Started
-    - [Installation](/4.0/installation)
-    - [Configuration](/4.0/configuration)
+    - [Installation]({url}/installation)
+    - [Configuration]({url}/configuration)
 - Resource Definitions
-    - [Create](/4.0/create_definition)
-    - [Read](/4.0/rud_definition#get)
-    - [Delete](/4.0/rud_definition#delete)
-    - [Update](/4.0/rud_definition#patch)
-    - [Source types](/4.0/source_types)
+    - [Create]({url}/create_definition)
+    - [Read]({url}/rud_definition#get)
+    - [Delete]({url}/rud_definition#delete)
+    - [Update]({url}/rud_definition#patch)
+    - [Source types]({url}/source_types)
 - Consuming data
-    - [Basic Usage](/4.0/consuming_data)
-    - [Notes](/4.0/notes)
+    - [Basic Usage]({url}/consuming_data)
+    - [Notes]({url}/notes)
 - Input
-	- [Introduction](/4.0/input)
-	- [Usage](/4.0/input_usage)
+	- [Introduction]({url}/input)
+	- [Usage]({url}/input_usage)

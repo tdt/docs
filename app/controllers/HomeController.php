@@ -7,50 +7,44 @@ class HomeController extends BaseController {
 	public function handleRequest(){
 
         // TODO create page not found page
-        $uri = \Request::path();
+        $uri = Request::path();
 
         // Default version of the documentation
         $version = "4.0";
-        $content_file = 'introduction';
+        $page = 'introduction';
 
         // If not the root, then split the uri to find the content
-        if($uri == '/'){
+        $segment1 = Request::segment(1);
+        $segment2 = Request::segment(2);
+        if(!empty($segment1)){
+            $version = $segment1;
 
-            $content_file = 'introduction';
-
-        }else{
-
-            // Return content based on the uri
-            $pieces = explode('/', $uri);
-
-            // Assuming that the uri consists of 2 pieces: version_number/content
-            if(count($pieces) > 2){
-                \App::abort("The uri $uri could not be resolved");
-            }else if(count($pieces) == 1){
-                $version = $pieces[0];
-            }else{
-                $version = $pieces[0];
-                $content_file = $pieces[1];
+            if(!empty($segment2)){
+                $page = $segment2;
             }
         }
 
         // Show the correct markdown contents
-        $content_file = __DIR__ . '/docs/' . $version . '/' . $content_file . '.md';
+        $page = __DIR__ . '/docs/' . $version . '/' . $page . '.md';
 
-        if(file_exists($content_file)){
+        if(file_exists($page)){
 
-            $contents = file_get_contents($content_file);
+            $contents = file_get_contents($page);
             $sidebar = file_get_contents(__DIR__ . '/docs/' . $version . '/sidebar.md');
 
+            // Transform documents
             $contents_html = Markdown::defaultTransform($contents);
             $sidebar_html = Markdown::defaultTransform($sidebar);
+
+            // Replace url variable
+            $sidebar_html = preg_replace('/{url}/mi', URL::to($version), $sidebar_html);
 
             return View::make('layouts.master')
                         ->with('sidebar', $sidebar_html)
                         ->with('content', $contents_html);
 
         }else{
-            \App::abort("The contents of $content_file could not be found.");
+            \App::abort(400, "The page you were looking for could not be found!");
         }
 	}
 }
