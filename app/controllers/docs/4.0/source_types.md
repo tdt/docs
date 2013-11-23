@@ -36,7 +36,7 @@ Note that it uses a lot of the functions that SourceType provides and adds some 
 
 Once you are familiar with the concepts and functions that need to be present in a SourceType implementation, you can easily create your own. First of all you need to figure out which parameters you need in order to read your data structure. Assuming that a certain data structure foo has 2 parameters foobar, bar and a description we can construct the following class with a few functions.
 
-<pre class="prettyprint">
+<pre class="prettyprint linenums">
 /**
  * Foo model
  */
@@ -137,7 +137,7 @@ So let's make sure you know what our definition of "ok" is. Open up your favorit
 
 When you are finished building your class that, in our Stock example, returns Stock data you'll need to put it in our installed folder located in the root of the application. Then you can add an installed definition like you add any other type of definition using our API (explained by the discovery document).
 
-<pre class="prettyprint">
+<pre class="prettyprint linenums">
 installed: {
 	description: "Create a definition that allows for publication of data inside a Installed datastructure.",
 	parameters: {

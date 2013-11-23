@@ -40,6 +40,7 @@ class HomeController extends BaseController {
             $sidebar_html = preg_replace('/{url}/mi', URL::to($version), $sidebar_html);
 
             return View::make('layouts.master')
+                        ->with('version', $version)
                         ->with('sidebar', $sidebar_html)
                         ->with('content', $contents_html);
 

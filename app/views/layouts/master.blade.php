@@ -16,7 +16,7 @@
         <nav class="navbar navbar-fixed-top">
             <a class="navbar-brand" href="{{ URL::to('') }} ">
                 <img src='{{ URL::to("img/logo.png") }}' alt='Datatank logo' />
-                <h1>The DataTank documentation</h1>
+                <h1>The DataTank {{ $version }} documentation</h1>
             </a>
         </nav>
 

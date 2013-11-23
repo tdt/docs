@@ -12,7 +12,7 @@ In our core publishing application (tdt/core) we've defined a set of meta-data n
 
 After installing input, the core application picks this up as a resource that can be triggered with methods, head down to the discovery document e.g. http://foo/discovery in order to see which methods you can call onto input and which parameters are expected.
 
-<pre class="prettyprint">
+<pre class="prettyprint linenums">
 {
     "httpMethod": "PUT",
     "path": "/input/{identifier}",
@@ -64,7 +64,7 @@ We encounter a parameters section at the level of path, description and httpMeth
 
 We can see that our top level will have the keys extract and map (and load and publish if the complete document is taken into account) and contain a few parameters themselves. Our document we have to pass is now this :
 
-<pre class="prettyprint">
+<pre class="prettyprint linenums">
 {
 	"extract" : null,
 	"map" : null
@@ -77,7 +77,7 @@ This type on itself takes on a set of parameters itself, namely the uri of the J
 
 Map has exactly the same workflow, and so does publish and load in the full discovery document, and contains a type of mapping, RDF in our example, which again takes on a set of parameters itself. With the rule of thumb that every parameter can be a key, we can construct the following document that needs to be put with the HTTP request.
 
-<pre class="prettyprint">
+<pre class="prettyprint linenums">
 {
 	"extract" : {
 		"type" : "json",

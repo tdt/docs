@@ -21,7 +21,7 @@ The installation is fairly simple and can be done by telling the core applicatio
 
 Note that the commands listed are assumed to be executed from the root folder of the datatank application.
 
-<pre class="prettyprint">
+<pre class="prettyprint linenums">
 "require": {
     ...,
     "tdt/input" : "dev-master"
