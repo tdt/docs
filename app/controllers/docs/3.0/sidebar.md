@@ -1,0 +1,13 @@
+- Getting started
+    - [Introduction]({url}/introduction)
+    - [Installation]({url}/installation)
+- Consuming data
+    - [Read]({url}/consuming#get)
+    - [Filtering]({url}/consuming#filter)
+    - [Visualizations]({url}/consuming#visualize)
+- Publishing data
+    - [Publishing basics]({url}/publishing_data)
+- Ingesting and mapping data
+    - [Introduction]({url}/input)
+    - [Usage]({url}/input_usage)
+- Admin functionalities

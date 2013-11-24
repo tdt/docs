@@ -10,12 +10,14 @@ class HomeController extends BaseController {
         $uri = Request::path();
 
         // Default version of the documentation
+        // TODO: have a default introduction (landing) page for every version?
         $version = "4.0";
         $page = 'introduction';
 
         // If not the root, then split the uri to find the content
         $segment1 = Request::segment(1);
         $segment2 = Request::segment(2);
+
         if(!empty($segment1)){
             $version = $segment1;
 
@@ -45,7 +47,7 @@ class HomeController extends BaseController {
                         ->with('content', $contents_html);
 
         }else{
-            \App::abort(400, "The page you were looking for could not be found!");
+            \App::abort(400, "The page you were looking for could not be found.");
         }
 	}
 }

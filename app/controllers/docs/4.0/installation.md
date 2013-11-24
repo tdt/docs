@@ -14,7 +14,7 @@ The DataTank requires a server with
 * mod rewrite enabled
 * PHP 5.4 or higher
 * Any database supported by [Laravel 4](http://four.laravel.com/docs/database)
-
+q²
 If you're using a <strong>Unix</strong> system, the easiest way to meet these requirements is to perform the following commands:
 
     $ apt-get install apache2 php5 mysql-server php5-dev php5-memcache memcached
