@@ -10,7 +10,7 @@ On this page you will learn:
 
 The DataTank is an open source tool that aims at publishing data. These data can be stored anywhere, in databases, in CSV files, SHP files, etc. The DataTank will read the data and publish it on the web in a certain requested format such as JSON or XML. Furthermore, it can also semantify your data so that it can be a part of the semantic web. Take a look at our movie to get familiar with the basics below.
 
-    We're currrently on version 4.0 of The DataTank which holds the same functionality but now relies on the Laravel framework for re-useability and stability reasons.
+    We're currrently on version 4.0 of The DataTank which holds the same functionality but now relies on the Laravel framework for re-useability and stability reasons. These documentation pages are taken over from our previous documentation. We advocate to migrate to our new version as the 4.0 code base will be used for our future progress.
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/3QMpd0BW7bU" frameborder="0" allowfullscreen></iframe>
 

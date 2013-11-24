@@ -21,7 +21,7 @@ Then you'll need to include tdt/input in your composer.json file in the root of 
 
 A semantifying sequence exists of an extract, map and load part. These parts need to be configured in what we call a <em>job</em>. This job thus contains all the information that is needed to extract data from a certain data source, map the extracted data based on a mapping file, creating triples and loading these triples into a triple store.
 
-Similar to the core, where you would add resource definitions to the tdtadmin/resources package, you will have to use the input endpoint to create new jobs which is located at <em>input</em> (e.g. http://foo/input).
+Similar to the core, where you would add resource definitions to the tdtadmin/resources package, you will have to use the input endpoint to create new jobs which is located at <em>input</em> (e.g. http://foo/input). Below are some examples of job configuration creations.
 
 Ex. 1: Adding a CLI loader
 
@@ -29,27 +29,8 @@ A command line interface loader, without mapping, can be used to check what the 
 
 In this example we are going to add a loader that will write all output to standard output and not map anything. We will tell the system that this job needs to be done every 1 minute.
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-$ curl http://data.example.com/TDTInput/Stations -XPUT -d '
+<pre class='prettyprint'>
+$ curl http://foo/TDTInput/Stations -XPUT -d '
 {
     "name": "Stations",
     "occurence": 1,
@@ -63,32 +44,25 @@ $ curl http://data.example.com/TDTInput/Stations -XPUT -d '
         "mapfile": "http://demo.thedatatank.org/nmbs.ttl",
         "datatank_package": "NMBS",
         "datatank_resource": "Stations",
-        "datatank_uri": "http://data.example.com/"
+        "datatank_uri": "http://foo/"
     },
     "load" : {
       "type":"CLI"
     }
 }' -i -u "username" -p
+</pre>
+
+
 Ex. 2: Adding an RDF loader
 
 Do you have a mapping file yet? Be sure to read this document first.
 
 Now you can add your own parameters when adding this:
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
+<pre class='prettyprint'>
 "load":{
     "type":"RDF",
-    "datatank_uri": "http://data.example.com/",
+    "datatank_uri": "http://foo/",
     "datatank_package": "NMBS",
     "datatank_resource": "Stations",
     "endpoint" : "http://yoursparqlendpoint:8890/sparql-auth",
@@ -97,10 +71,21 @@ Now you can add your own parameters when adding this:
     "endpoint_user" : "dba",
     "endpoint_password" : "dba"
 }
-Your workflow
+</pre>
 
-Everyone has his or her workflow. To help you with that, you can test the job you have added by going to http://data.example.com/TDTInput/{jobname}/test. It will give you an output with possible error messages.
+## Creating a mapping file
 
-Install the worker
+In order to use tdt/input to map datasources to RDF data, a mapping file is required. Before you can start, some prior knowledge is required:
 
-In order for the scheduler to be able to execute everything, GET  http://data.example.com/TDTInput/Worker from time to time. The best way to do this is to add a cron job which curl requests that URI every minute, and stores the output in the logs.
+* A basic understanding of RDF and its graph pattern
+* A notion of the Turtle syntax
+* A good understanding about the domains of the data, and public Ontologies describing them.
+* A mapping file is a counterpart textfile of your original datasource. Inside this textfile, we describe a mapping specification to convert tabular data to an RDF graph pattern. This specification itself is also written in the RDF based language Vertere Mapping Language, and is syntactically represented with Turtle. The recommended filename of this file is therefore <name_source>.<extension_source>.spec.ttl . You can edit this file using a simple texteditor.
+
+For a detailed description on how to declare the mappings, read the documentation on the [Vertere Mapping Language](https://github.com/tdt/input/blob/development/includes/Vertere/dist/documentation/README.md).
+
+You may find a working example for each file type (CSV, XML, JSON) at the examples folder. For each file type, there is a source file and its corresponding mapping file.
+
+## Running the job
+
+In order to run your job configuration, allowing data extraction, mapping, loading you'll have to go to the URI adding a /run e.g. http://foo/input/eml/example/run.
