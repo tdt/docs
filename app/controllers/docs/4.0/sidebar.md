@@ -4,6 +4,7 @@
 - Getting Started
     - [Installation]({url}/installation)
     - [Configuration]({url}/configuration)
+    - [Errors]({url}/errors)
 - Resource Definitions
     - [Create]({url}/create_definition)
     - [Read]({url}/rud_definition#get)
