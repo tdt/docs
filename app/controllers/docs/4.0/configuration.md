@@ -2,9 +2,9 @@
 
 On this page you will learn how to configure the application for
 
-* [production purposes](#production)
-* [development purposes](#development)
-* [unit testing](#unittesting)
+* [Production purposes](#production)
+* [Development purposes](#development)
+* [Unit testing](#unittesting)
 
 The configuration is entirely handled by the Laravel framework, if you encounter things that aren't covered on this page, visit the [Laravel configuration documentation](http://four.laravel.com/docs/configuration) or if that doesn't help you out, get in touch by e-mail or github.
 
@@ -74,12 +74,12 @@ That's all there is to it!
 <a name='development'></a>
 ## Development
 
-If you're planning on developping The DataTank, you'll need to read up on how to configure environments in the [Laravel configuration documentation](http://four.laravel.com/docs/configuration#environment-configuration). To summarize this, in order to load your database for development (e.g. localhost) only, you need to create a folder called <em>local</em> in the <em>app/config</em> folder, and make sure the environment is recognized by Laravel. This is done by adding your host name to the <em>$env</em> variable in the <em>bootstrap/start.php</em> file. Don't forget to add this file to the .gitignore.
+If you're planning on getting your hands dirty with The DataTank, you'll need to read up on how to configure environments in the [Laravel configuration documentation](http://four.laravel.com/docs/configuration#environment-configuration). In short, in order to load your database for development (e.g. localhost) only, you need to create a folder called <em>local</em> in the <em>app/config</em> folder, and make sure the environment is recognized by Laravel. This is done by adding your host name to the <em>$env</em> variable in the <em>bootstrap/start.php</em> file. Don't forget to add this file to the .gitignore file.
 
 <a name='unittesting'></a>
 ## Unit testing
 
-If you want to run the unittests, to check if everything is still ok after adjustments, or to test your own additional tests, go to the root of the application and perform the simple command:
+If you want to run the unittests, to check if everything is still ok after adjustments or to test your own additional tests, go to the root of the application and perform the simple command:
 
     $ phpunit
 
@@ -99,8 +99,4 @@ After that, fill up the database with some basic users using our seeder:
 
     $ php artisan db:seed --env=testing --class=UserSeeder
 
-That's it! You can perform the phpunit command now, and see the tests at work.
-
-
-
-
+That's it! You can perform the phpunit command now.

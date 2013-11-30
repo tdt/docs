@@ -2,13 +2,13 @@
 
 In this section you will learn
 
-* [the big picture and its components](#project_setup)
-* [what development cycles we have](#devcycle)
+* [The big picture and its components](#project_setup)
+* [What development cycles we have](#devcycle)
 
 <a name="project_setup"></a>
 ## The big picture
 
-Our project's aim is providing an open source tool that can publish data in a RESTful way and provide an additional package that can semantify your data. At this moment you're looking at the contents of the tdt/docs repository, this repository holds the documentation for all of the tdt repositories starting from version 4.0. Our [repository](https://github.com/tdt) holds several packages at this moment, the ones relevant to version 4.0 are
+Our project's aim is providing an open source tool that can publish data in a RESTful way, provide visualizations that make you interpret the data and provide an additional package that can semantify your data. At this moment you're looking at the contents of the [tdt/docs](https://github.com/tdt/docs) repository, this repository holds the documentation for all of the tdt repositories starting from version 4.0. And contains documentation about our previous version 3.0. Our [repository](https://github.com/tdt) holds several packages at this moment, the ones relevant to version 4.0 are
 
 * [core](https://github.com/tdt/core)
 * [input](https://github.com/tdt/input)
@@ -30,4 +30,4 @@ The streamingrdfmapper package contains code that provides mapping functionaliti
 
 We currently work with bi-annual development cycles that provides releases on the 5th of december and june.
 
-Our versions are created of a major release number and a minor number which represents certain patches to be applied. If these numbers aren't sufficient sub-minor numbers will be used. Our code base has a set of core developers, but as it is an open source project anyone can contribute in the form of pull-requests. Feature request, bugs, issues, questions and so on can be added to the corresponding repo using the github issue tracker.
+Our versions are created following the [semantic versioning 2.0.0](http://semver.org/) specification. Our code base has a set of core developers, but as it is an open source project anyone can contribute in the form of pull-requests. Feature request, bugs, issues, questions and so on can be added to the corresponding repo using the github issue tracker.

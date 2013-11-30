@@ -2,11 +2,11 @@
 
 On this page you will learn
 
-* [what different data sources are supported](#source_types)
-* [how to create your own source type](#create_source_type)
-* [how to create an installed source type](#installed)
+* [What different data sources are supported](#source_types)
+* [How to create your own source type](#create_source_type)
+* [How to create an installed source type](#installed)
 
-Note that this documentation is primarely targetted at developers and will be quite technical.
+Note that this documentation is primarely targets technical people.
 
 <a name="source_types"></a>
 ## Data sources

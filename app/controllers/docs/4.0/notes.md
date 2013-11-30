@@ -2,10 +2,10 @@
 
 On this page we will elaborate more on some specifics about source types and certain formats
 
-* [xml format](#xmlformat)
-* [shp source type](#shp)
-* [sparql source type](#sparql)
-* [xml source type](#xml)
+* [Xml format](#xmlformat)
+* [Shp source type](#shp)
+* [Sparql source type](#sparql)
+* [Xml source type](#xml)
 
 There are some side-notes to be made with the requesting of data be it in certain formats, or from certain source types.
 

@@ -2,8 +2,8 @@
 
 In this section you will learn
 
-* [the functionality of input](#functionality)
-* [how to install the input package](#install)
+* [The functionality of input](#functionality)
+* [How to install the input package](#install)
 
 <a name="functionality"></a>
 ## Functionality

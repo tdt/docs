@@ -2,7 +2,7 @@
 
 On this page you will learn
 
-* [how to create a definition](#publish)
+* [How to create a definition](#publish)
 
 <a name="publish"></a>
 ## Adding a resource
@@ -20,7 +20,7 @@ The discovery document shows a list of methods that one can perform on the resou
 <pre class="prettyprint pre-scrollable linenums">
 {
     "protocol": "rest",
-    "rootUrl": "http://foo",
+    "rootUrl": "http://foo/api",
     "resources": {
         "definitions": {
             "methods": {
@@ -79,9 +79,9 @@ The document also provides us a `path` property which tells us to which path we 
 
 From the description we can understand that the identifier consists of a collection part and a naming part. In this tutorial we're going to publish data about trees, we have 3 datasets in total, data from 2011, 2012 and 2013. Our collection uri will be "trees" and the name of the resource will be the year that the data is relevant to, leading to the following structure:
 
-* http://foo/definitions/trees/2011
-* http://foo/definitions/trees/2012
-* http://foo/definitions/trees/2013
+* http://foo/api/definitions/trees/2011
+* http://foo/api/definitions/trees/2012
+* http://foo/api/definitions/trees/2013
 
 Note that we can only add 1 resource definition per method call.
 
@@ -100,7 +100,7 @@ Assuming we work in a PHP environment to create an HTTP call using cURL, we can 
 $ch = curl_init();
 
 // Define our definition uri
-$url = "http://foo/definitions/trees/2011";
+$url = "http://foo/api/definitions/trees/2011";
 
 // Construct the meta-data properties
 $put = array(
@@ -153,7 +153,7 @@ Adding this information to the cURL request in our PHP script we have the follow
 $ch = curl_init();
 
 // Define our definition uri
-$url = "http://foo/definitions/trees/2011";
+$url = "http://foo/api/definitions/trees/2011";
 
 // Construct the meta-data properties
 $put = array(

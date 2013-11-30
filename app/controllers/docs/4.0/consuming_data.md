@@ -2,7 +2,7 @@
 
 On this page you will learn how you can
 
-* [request data from The DataTank](#request)
+* [Request data from The DataTank](#request)
 
 <a name='request'></a>
 ## Requesting data

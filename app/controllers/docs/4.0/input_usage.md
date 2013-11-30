@@ -2,8 +2,8 @@
 
 In this section you will learn
 
-* [how to configure a job](#job)
-* [overview of jobs](#overview)
+* [How to configure a job](#job)
+* [Overview of jobs](#overview)
 
 <a name="job"></a>
 ## Configuring a job

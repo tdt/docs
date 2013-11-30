@@ -2,8 +2,8 @@
 
 On this page you will learn
 
-* [what the system requirements are](#requirements)
-* [how to install a datatank](#installation)
+* [What the system requirements are](#requirements)
+* [How to install a datatank](#installation)
 
 <a name="requirements"></a>
 ## System Requirements
