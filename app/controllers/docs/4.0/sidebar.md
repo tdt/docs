@@ -7,9 +7,9 @@
     - [Errors]({url}/errors)
 - Resource Definitions
     - [Create]({url}/create_definition)
-    - [Read]({url}/rud_definition#get)
-    - [Delete]({url}/rud_definition#delete)
-    - [Update]({url}/rud_definition#patch)
+    - [Read]({url}/definitions#get)
+    - [Delete]({url}/definitions#delete)
+    - [Update]({url}/definitions#patch)
     - [Source types]({url}/source_types)
 - Consuming data
     - [Basic Usage]({url}/consuming_data)
