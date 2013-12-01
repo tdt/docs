@@ -9,17 +9,17 @@ On this page we will elaborate more on some specifics about source types and cer
 
 There are some side-notes to be made with the requesting of data be it in certain formats, or from certain source types.
 
-<a name='xmlformat'></a>
+<a id='xmlformat'></a>
 ## XML format
 
 If you request data in an xml format, do note that xml has a few flaws in its design and specification. One of them is the prohibition of the first character of a tag name being an integer according to the [XML spec](http://www.w3.org/TR/REC-xml/#NT-Name). Therefore if properties (column names in a CSV file for example) are integers, the XML will be 'malformed', but will still be made nonetheless. Note that column names that contain whitespace will also be concatenated with an underscore since XML does not take whitespaced tag names.
 
-<a name='shp'></a>
+<a id='shp'></a>
 ## SHP source type
 
 Currently we store geo properties in the back-end as meta-data information so that formatters can use this information to provide more visual information (e.g. map formatter). There currently is 1 inhibition considering the SHP publisher, namely it can take only 1 type of shape. We have noticed that the shape files currently available on several open data portals (Germany, Italy, ...) all use 1 type of shape type in their binary structure be it a set of points, multi-lines, polygons, etc. If we encounter however a lot of instances where a variety of shapes is used, we'll probably opt to calculate the type of the shape a row represents in the SHP file on the fly.
 
-<a name='sparql'></a>
+<a id='sparql'></a>
 ## SPARQL source type
 
 The SPARQL source type can take a query as a parameter, and can even contain parameters inside the query itself which can then be filled in. If our query were to be the following:
@@ -34,7 +34,7 @@ So, in order to fill in the ${graph_name} part of the SPARQL query, you have to 
 
 This value will be replaced on a 1-1 raw basis. A very important caveat to mention here is that when you happen to find yourself in a situation where you have to pass a hash tag along as a value of a request parameter you'll have to url encode (# = %23) it, and replace that in your query string e.g. http://foo/sparql/bar.json?graph\_name=foo\_graph%23posthashtag
 
-<a name='xml'></a>
+<a id='xml'></a>
 ## XML source type
 
 When publishing an XML data source, you might notice some strange formatting of the data at first sight. This however is due to the specification of the XML spec, and its incompatibility with other formats such as JSON and representation in PHP.

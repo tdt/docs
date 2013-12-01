@@ -8,7 +8,7 @@ On this page you will learn
 
 Note that this documentation is primarely targets technical people.
 
-<a name="source_types"></a>
+<a id="source_types"></a>
 ## Data sources
 
 In previous sections we have mentioned how you can determine which data structures can be published by using our platform. Each type of data structure is abstracted in our platform as a source type. This is modelled in our models folder located in the root of the application.
@@ -31,7 +31,7 @@ To get familiar with the concept of inheriting from the SourceType class and how
 
 Note that it uses a lot of the functions that SourceType provides and adds some validators for its own parameters as well. These validators only need to be declared and will be handled by the super class. If you find yourself in the need of a combined validation when two or more parameters that are passed need to be validated in a certain combination of eachother then you'll have to implement this validation yourself in the validate function. An example of this can be seen in the InstalledDefinition model where we need to validate both the class name and the path of the file where the class is located.
 
-<a name="create_source_type"></a>
+<a id="create_source_type"></a>
 ## Create your own source type
 
 Once you are familiar with the concepts and functions that need to be present in a SourceType implementation, you can easily create your own. First of all you need to figure out which parameters you need in order to read your data structure. Assuming that a certain data structure foo has 2 parameters foobar, bar and a description we can construct the following class with a few functions.
@@ -119,7 +119,7 @@ This creates a unique migration file for you in the database/migrations folder. 
 After this you can perform any type of methods that are listed for other source types in our application on your own source type.
 
 
-<a name="installed"></a>
+<a id="installed"></a>
 ## Installed resource
 
 The datatank's functionality has so far always been focussed on publishing data from datasets, however this is not the only way to publish data. We also allow a custom build class to return data, instead of this data being read from a certain data file in a generic way. This concept is named an "installed resource". To place this in the big picture let's do a small recap.

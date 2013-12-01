@@ -5,7 +5,7 @@ In this section you will learn
 * [How to configure a job](#job)
 * [Overview of jobs](#overview)
 
-<a name="job"></a>
+<a id="job"></a>
 ## Configuring a job
 
 In our core publishing application (tdt/core) we've defined a set of meta-data necessary to read data as a (resource) definition. Input has a same approach to identify a set of meta-data that make up the entire emlp process and is called a job. This job holds a set of parameters per process of the emlp variable to which purpose the part is used. Sounds difficult and complicated, so let's break it down with an example.
@@ -93,7 +93,7 @@ Map has exactly the same workflow, and so does publish and load in the full disc
 
 In a real world example you would need to pass a load section and optionally a publish section with the document as well.
 
-<a name="overview"></a>
+<a id="overview"></a>
 ## Overview
 
 Just like definitions, you can perform a get method on the input resource. This will return all of the configured jobs in a JSON-format. Note that each of these jobs can be used as a document to put the same configuration elsewhere.

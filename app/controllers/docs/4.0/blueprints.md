@@ -5,7 +5,7 @@ In this section you will learn
 * [The big picture and its components](#project_setup)
 * [What development cycles we have](#devcycle)
 
-<a name="project_setup"></a>
+<a id="project_setup"></a>
 ## The big picture
 
 Our project's aim is providing an open source tool that can publish data in a RESTful way, provide visualizations that make you interpret the data and provide an additional package that can semantify your data. At this moment you're looking at the contents of the [tdt/docs](https://github.com/tdt/docs) repository, this repository holds the documentation for all of the tdt repositories starting from version 4.0. And contains documentation about our previous version 3.0. Our [repository](https://github.com/tdt) holds several packages at this moment, the ones relevant to version 4.0 are
@@ -25,7 +25,7 @@ The docs package contains all of the documentation relevant to our repository fo
 
 The streamingrdfmapper package contains code that provides mapping functionalities used in the input package. It can take a certain mapping file that specifies which data must be mapped onto a certain semantic concept. This creates triples that can be used for further processing.
 
-<a name="devcycle"></a>
+<a id="devcycle"></a>
 ## Development cycles
 
 We currently work with bi-annual development cycles that provides releases on the 5th of december and june.
