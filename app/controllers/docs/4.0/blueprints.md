@@ -2,8 +2,8 @@
 
 In this section you will learn
 
-* [The big picture and its components](#project_setup)
-* [What development cycles we have](#devcycle)
+* [The big picture of the project](#project_setup)
+* [Our development cycles](#devcycle)
 
 <a id="project_setup"></a>
 ## The big picture

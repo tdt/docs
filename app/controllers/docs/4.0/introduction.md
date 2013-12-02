@@ -8,16 +8,16 @@ On this page you will learn
 <a id="what"></a>
 ## What is The DataTank?
 
-The DataTank is an open source tool that publishes data. These data can be stored in text based files such as CSV, XML and JSON or in binary structures such as SHP files and relational databases. The DataTank will read the data out of these structures and publish them on the web using a given URI. It can then provide these data in any format a user wants, no matter what the original datastructure was. Furthermore, it can also semantify your data so that it can be a part of the semantic web.
+The DataTank is an open source tool that publishes data. These data can be stored in text based files such as CSV, XML and JSON or in binary structures such as SHP files and relational databases. The DataTank will read the data out of these structures and publish them on the web using a URI as an identifier. It can then provide these data in any format a user wants, no matter what the original datastructure was. In practical terms, this means that you can provide a JSON feed on a certain URI based on data somewhere on the web say, a CSV output from a google spreadsheet.
 
-The documentation that you can find in the sidebar is relevant for the [input](https://github.com/tdt/input) and [core](https://github.com/tdt/core) repository marked by version 4.0.
+The documentation that you can find through the sidebar is relevant for the [input](https://github.com/tdt/input) and [core](https://github.com/tdt/core) repository marked by version 4.0.
 
 <a id="how"></a>
 ## How does it work?
 
 1. Publishing data
 
-    The DataTank publishes data on the web in a RESTful way. However, in contrast to what many people intuitively suspect, The DataTank doesn't copy nor store your data, nor will it act as if The DataTank owns that data. This means that the owner of the data stays in full control! So how do we publish that data to the web? Well, we ask the users that want to publish data, to pass along the meta-data necessary to read data from the data structure.
+    The DataTank publishes data on the web in a RESTful way. It doesn't copy nor store your data, nor will it act as if The DataTank owns that data. This means that the owner of the data stays in full control! So how do we publish that data to the web? Well, we ask the users that want to publish data, to pass along the meta-data necessary to read data from the data structure.
 
     For example if I want to publish a CSV file, I'd have to pass along the uri of where that file is located, and what character is used to delimit the values in order to have a basic set of information that allow extraction out of the file.
 
