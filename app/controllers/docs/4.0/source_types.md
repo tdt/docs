@@ -34,9 +34,11 @@ Note that it uses a lot of the functions that SourceType provides and adds some 
 <a id="create_source_type"></a>
 ## Create your own source type
 
-Once you are familiar with the concepts and functions that need to be present in a SourceType implementation, you can easily create your own. First of all you need to figure out which parameters you need in order to read your data structure. Assuming that a certain data structure foo has 2 parameters foobar, bar and a description we can construct the following class with a few functions.
 
-   > Only create a source type if you're sure you need one. If you want to publish data through custom extraction (e.g. a scraper) first consider making an installed resource before creating a source type, the level of difficulty to get started is much lower.
+> <i class='fa fa-2x fa-warning'></i> Only create a source type if you're sure you need one. If you want to publish data through custom extraction (e.g. a scraper) first consider making an installed resource before creating a source type, the level of difficulty to get started is much lower and you can create seperate repositories for them.
+
+
+Once you are familiar with the concepts and functions that need to be present in a SourceType implementation, you can easily create your own. First of all you need to figure out which parameters you need in order to read your data structure. Assuming that a certain data structure foo has 2 parameters foobar, bar and a description we can construct the following class with a few functions.
 
 <pre class="prettyprint linenums">
 /**

@@ -38,12 +38,12 @@ To install the latest version of core execute the following commands
 
 
 
-**Note**
-
-If you haven't installed The DataTank through the create-project command, there's a chance that some commands haven't been executed that are necessary.
-One of them might be the deployment of basic users and group, in order to do this manually execute the following after (!) you have performed the composer update command.
-
-    $ php artisan db:seed
+>**<i class='fa fa-info-circle'></i>Note**
+>
+>If you haven't installed The DataTank through the create-project command, there's a chance that some commands haven't been executed that are necessary.
+>One of them might be the deployment of basic users and group, in order to do this manually execute the following after (!) you have performed the composer update command.
+>
+>    `$ php artisan db:seed`
 
 #### Get started with our demo data
 
