@@ -14,6 +14,10 @@
 - Consuming data
     - [Basic Usage]({url}/consuming_data)
     - [Notes]({url}/notes)
+- User Interface
+    - [Introduction]({url}/ui_introduction)
+    - [Resource definitions]({url}/ui_definitions)
+    - [Authentication]({url}/ui_authentication)
 - Input
 	- [Introduction]({url}/input)
 	- [Usage]({url}/input_usage)
