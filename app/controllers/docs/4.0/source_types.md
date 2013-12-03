@@ -4,11 +4,10 @@ On this page you will learn
 
 * [What different data sources are supported](#source_types)
 * [How to create your own source type](#create_source_type)
-* [How to create an installed source type](#installed)
 
 Note that this documentation is primarely targets technical people.
 
-<a id="source_types"></a>
+<a id='source_types' class='anchor'></a>
 ## Data sources
 
 In previous sections we have mentioned how you can determine which data structures can be published by using our platform. Each type of data structure is abstracted in our platform as a source type. This is modelled in our models folder located in the root of the application.
@@ -31,7 +30,7 @@ To get familiar with the concept of inheriting from the SourceType class and how
 
 Note that it uses a lot of the functions that SourceType provides and adds some validators for its own parameters as well. These validators only need to be declared and will be handled by the super class. If you find yourself in the need of a combined validation when two or more parameters that are passed need to be validated in a certain combination of eachother then you'll have to implement this validation yourself in the validate function. An example of this can be seen in the InstalledDefinition model where we need to validate both the class name and the path of the file where the class is located.
 
-<a id="create_source_type"></a>
+<a id='create_source_type' class='anchor'></a>
 ## Create your own source type
 
 

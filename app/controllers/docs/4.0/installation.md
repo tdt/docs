@@ -5,7 +5,7 @@ On this page you will learn
 * [What the system requirements are](#requirements)
 * [How to install a datatank](#installation)
 
-<a id="requirements"></a>
+<a id='requirements' class='anchor'></a>
 ## System Requirements
 
 The DataTank requires a server with
@@ -22,7 +22,7 @@ If you're using a <strong>Unix</strong> system, the easiest way to meet these r
 
 If you're using a <strong>Windows</strong> system, you'll have to download a web stack that holds the necessary requirements.
 
-<a id="installation"></a>
+<a id='installation' class='anchor'></a>
 ## Installation
 
 ### Command line

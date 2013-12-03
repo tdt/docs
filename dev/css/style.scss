@@ -245,6 +245,13 @@ footer{
     }
 }
 
+.anchor{
+    display: block;
+    position: relative;
+    top: -($header-height);
+    visibility: hidden;
+}
+
 .note{
     color: $primary-soft;
 }
