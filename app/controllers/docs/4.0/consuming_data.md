@@ -3,6 +3,7 @@
 On this page you will learn how you can
 
 * [Request data from The DataTank](#request)
+* [Add parameters to a request](#params)
 
 <a id='request'></a>
 ## Requesting data
@@ -27,13 +28,13 @@ The DataTank makes data available through a REST interface. This means that data
 }
 </pre>
 
-The discovery document shows that http://foo/info contains a document that has references to all available datasets, as stated before this list will be presented in a json format since it's part of the resources the datatank manages itself. If you haven't published any datasets so far, there will still be 1 entry in this info document, namely the <em>info/dcat</em> entry. This entry represents a document that lists information about the published datasets, much like the info resource does itself, but created from properties standardized in the [DCAT vocabulary](http://www.w3.org/TR/vocab-dcat/).
+The discovery document shows that http://foo/info contains a document that has references to all available datasets, as stated before this list will be presented in a json format since it's part of the resources the datatank manages itself. If you haven't published any datasets so far, there will still be 1 entry in this info document, namely the <em>dcat</em> entry. This entry represents a document that lists information about the published datasets, much like the info resource does itself, but created from properties standardized in the [DCAT vocabulary](http://www.w3.org/TR/vocab-dcat/) and enriched with [dublin core](http://dublincore.org/documents/dcmi-terms/) properties.
 
 <pre class="prettyprint linenums">
 {
-	info/dcat: {
+	dcat: {
 		description: "A DCAT document about the available datasets created by using the DCAT vocabulary.",
-		uri: "http://foo/info/dcat"
+		uri: "http://foo/api/dcat"
 		type: null
 	},
 	geo/csv: {
@@ -53,3 +54,8 @@ The discovery document shows that http://foo/info contains a document that has r
 As you can see every entry has a description that is retrieved from the definition itself and contains the type of the data structure that holds the data represented by the uri. Furthermore we can see that some resources have a parameters entry. These represent optional request parameters that can be passed, in most cases this will be a duo of paging parameters, but can vary on the level of a single entry for these request parameters are configurable.
 
 This is all you need to know in order to get a glimp of what datasources are available and on which uri they are retrievable.
+
+<a id="params"></a>
+## Request parameters
+
+There are two ways you can add parameters to a get request in order to retrieve data, namely required and optional parameters. <em>Optional parameters</em> are just like your average request parameters you pass along with a URI, using the query string.
