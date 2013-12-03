@@ -58,4 +58,10 @@ This is all you need to know in order to get a glimp of what datasources are ava
 <a id="params" class="anchor"></a>
 ## Request parameters
 
-There are two ways you can add parameters to a get request in order to retrieve data, namely required and optional parameters. <em>Optional parameters</em> are just like your average request parameters you pass along with a URI, using the query string.
+There are two ways you can add parameters to a get request in order to retrieve data, namely required and optional parameters. <em>Optional parameters</em> are just like your average request parameters you pass along with a URI, using the query string. The required parameters must be passed by using the URI.
+
+For example, if you have to pass 2 required parameters and one optional parameter called bar for a resource on the URI http://foo/data/dummy, the request would like like this:
+
+    $ curl -v http://foo/data/dummy/param1/param2.json?bar=value
+
+where <em>param1</em> and <em>param2</em> resemble the first two required parameters and bar the optional one.
