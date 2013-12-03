@@ -29,6 +29,7 @@ body {
     background-color: $secondary-highlight;
     font-family: 'Open Sans', 'Oswald', sans-serif;
     font-size: 13px;
+    line-height: 19px;
     color: #3C606E;
     padding-top: $header-height;
 }
@@ -244,6 +245,13 @@ footer{
     }
 }
 
+.anchor{
+    display: block;
+    position: relative;
+    top: -($header-height);
+    visibility: hidden;
+}
+
 .note{
     color: $primary-soft;
 }
@@ -260,12 +268,14 @@ h2{
 
 h3{
     font-size: 20px;
-    margin-top: 25px;
+    margin-top: 35px;
+    margin-bottom: 10px;
 }
 
 h4{
     font-size: 16px;
-    margin-top: 25px;
+    margin-top: 30px;
+    margin-bottom: 15px;
 }
 
 h5{
@@ -279,6 +289,25 @@ h6{
 a{
     border-bottom: 1px dotted $primary;
     color: $primary;
+}
+
+blockquote{
+    background-color: $primary;
+    color: #fff;
+    border: 0px none;
+    margin-top: 15px;
+
+    p{
+        font-size: 13px !important;
+        line-height: 22px;
+
+        i{
+            margin-right: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            float:left;
+        }
+    }
 }
 
 @media(max-width:768px){

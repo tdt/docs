@@ -5,14 +5,14 @@ On this page you will learn
 * [What The DataTank is](#what)
 * [How it works](#how)
 
-<a id="what"></a>
+<a id='what' class='anchor'></a>
 ## What is The DataTank?
 
 The DataTank is an open source tool that publishes data. These data can be stored in text based files such as CSV, XML and JSON or in binary structures such as SHP files and relational databases. The DataTank will read the data out of these structures and publish them on the web using a URI as an identifier. It can then provide these data in any format a user wants, no matter what the original datastructure was. In practical terms, this means that you can provide a JSON feed on a certain URI based on data somewhere on the web say, a CSV output from a google spreadsheet.
 
 The documentation that you can find through the sidebar is relevant for the [input](https://github.com/tdt/input) and [core](https://github.com/tdt/core) repository marked by version 4.0.
 
-<a id="how"></a>
+<a id='how' class='anchor'></a>
 ## How does it work?
 
 1. Publishing data

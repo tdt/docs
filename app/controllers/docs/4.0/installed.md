@@ -38,7 +38,7 @@ installed: {
 }
 </pre>
 
-    > The path description indicates that you have to put your class inside the installed folder of our application.
+> <i class='fa fa-lg fa-exclamation-circle'></i> The path description indicates that you have to put your class inside the installed folder of our application.
 
 An example PHP script that adds an installed resource could be the following assuming that our class is located in the installed folder under path: installed-examples/Stock.php.
 

@@ -5,7 +5,7 @@ On this page you will learn
 * [What the system requirements are](#requirements)
 * [How to install a datatank](#installation)
 
-<a id="requirements"></a>
+<a id='requirements' class='anchor'></a>
 ## System Requirements
 
 The DataTank requires a server with
@@ -22,7 +22,7 @@ If you're using a <strong>Unix</strong> system, the easiest way to meet these r
 
 If you're using a <strong>Windows</strong> system, you'll have to download a web stack that holds the necessary requirements.
 
-<a id="installation"></a>
+<a id='installation' class='anchor'></a>
 ## Installation
 
 ### Command line
@@ -38,12 +38,12 @@ To install the latest version of core execute the following commands
 
 
 
-**Note**
-
-If you haven't installed The DataTank through the create-project command, there's a chance that some commands haven't been executed that are necessary.
-One of them might be the deployment of basic users and group, in order to do this manually execute the following after (!) you have performed the composer update command.
-
-    $ php artisan db:seed
+>**<i class='fa fa-info-circle'></i>Note**
+>
+>If you haven't installed The DataTank through the create-project command, there's a chance that some commands haven't been executed that are necessary.
+>One of them might be the deployment of basic users and group, in order to do this manually execute the following after (!) you have performed the composer update command.
+>
+>    `$ php artisan db:seed`
 
 #### Get started with our demo data
 

@@ -6,7 +6,7 @@ In addition to creating definitions, this page will focus on
 * [How to delete a definition](#delete)
 * [How to patch a definition](#patch)
 
-<a id="read"></a>
+<a id='read' class='anchor'></a>
 ## Read a definition
 
 In order to retrieve the set of parameters that make up a definition, you can perform the get method on the definitions resource. This can be deducted from the snippet discovery document below.
@@ -31,7 +31,7 @@ In order to retrieve the set of parameters that make up a definition, you can pe
 
 Moreover, if we fill in an identifier value, we'll only retrieve that specific definition unique to the given identifier. Note that this information is only retrievable in a JSON format, all of our core resources (e.g. definitions, input, info, ...) for that matter will return JSON formatted documents. The retrieval of the published data however is done through content negotiation.
 
-<a id="delete"></a>
+<a id='delete' class='anchor'></a>
 ## Delete a definition
 
 The delete method, as shown by the snippet discovery document, will allow us to delete a resource definition. Note that this will also remove the uri on which the data could be retrieved. An example of how to perform a delete request is given below the snippet.
@@ -81,7 +81,7 @@ curl_setopt_array($ch, $options);
 $response = curl_exec($ch);
 </pre>
 
-<a id="patch"></a>
+<a id='patch' class='anchor'></a>
 ## Update a definition
 
 The patch method of the definitions resource allows to update certain parts of the definition. These parts are dependent on the source type, and can be checked using the discovery document. Note that this is almost exactly the same as the put-method of the definitions resource. The fundamental difference here is that you're updating a resource, making it so that there's no difference between required or additional parameters. As an example, a snippet of the discovery document (patching a csv) is shown below as well as an example patch request.

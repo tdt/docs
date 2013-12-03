@@ -5,7 +5,7 @@ In this section you will learn
 * [The big picture of the project](#project_setup)
 * [Our development cycles](#devcycle)
 
-<a id="project_setup"></a>
+<a id='project_setup' class='anchor'></a>
 ## The big picture
 
 Our project's aim is to provide a tool that enables open data consumption in an easy, open and transparant way. This is achieved by providing an open source tool that can
@@ -32,7 +32,7 @@ The docs package contains all of the documentation relevant to our repository fo
 
 The streamingrdfmapper package contains code that provides mapping functionalities used in the input package. It can take a certain mapping file that specifies which data must be mapped onto a certain semantic concept. The package will then create and return triples that can be used for further processing.
 
-<a id="devcycle"></a>
+<a id='devcycle' class='anchor'></a>
 ## Development cycles
 
 We currently work with bi-annual development cycles that provides releases on the 5th of december and the 5th of june.

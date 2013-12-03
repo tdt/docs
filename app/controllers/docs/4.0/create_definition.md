@@ -4,7 +4,7 @@ On this page you will learn
 
 * [How to create a definition](#publish)
 
-<a id="publish"></a>
+<a id='publish' class='anchor'></a>
 ## Adding a resource
 
 Our core functionality is to extract data from a certain data structure and provide this content to the user using HTTP. As described in our introduction pages, in order to extract data we need some meta-data telling us how to do that. This set of meta-data is called a resource definition, or - shorter - definition.

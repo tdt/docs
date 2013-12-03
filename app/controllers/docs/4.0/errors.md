@@ -7,7 +7,7 @@
 The DataTank uses HTTP response codes to indicate success or failure of a request. In general, codes in the 2xx range indicate success, codes in the 4xx range indicate an error that resulted from the provided information (e.g. a required parameter was missing), and codes in the 5xx range indicate an error with our servers or a bug.
 
 ## HTTP Status Code Summary
-<a id="httpcodes"></a>
+<a id='httpcodes' class='anchor'></a>
 
 * **200 OK** - Everything worked as expected.
 * **400 Bad Request** - Often missing a required parameter.
@@ -19,7 +19,7 @@ The DataTank uses HTTP response codes to indicate success or failure of a reques
 * **500, 502, 503, 504 Server errors** - something went wrong on the DataTank's end.
 
 ## The error object
-<a id="object"></a>
+<a id='object' class='anchor'></a>
 
 
 <pre class="prettyprint linenums">
