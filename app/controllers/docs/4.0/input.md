@@ -14,7 +14,7 @@ The functional analysis of this semantifying operation identifies 3 steps, namel
 
 Because we're embedding this functionality as a package in our core application we can also publish our freshly new made semantic data (or whatever new data you produced using the input package) to the web. This can be done by configuring an optional 4th processing factor in the eml process. This last process is called the publish process and takes a set of variables needed to publish the result of the load process.
 
-<a id='install'></a>
+<a id='install' class='anchor'></a>
 ## Installing input
 
 The installation is fairly simple and can be done by telling the core application that tdt/input is now a required package. This can be done by updating the require section of the composer.json file, located in your root application folder.

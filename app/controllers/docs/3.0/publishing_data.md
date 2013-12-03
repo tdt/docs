@@ -8,7 +8,7 @@ There are 2 packages in our framework providing Info and Admin resources.
 The first one is a public accessible package in which information is shown about the resources published through the datatank.
 Next to that we have an Admin package which handles GET, PUT, DELETE requests. This package holds resources to which new resource definitions can be PUT or DELETEd and full definitions can be GET. This package holds a very important resource, tdtadmin/resources, that forms the entry point through which new resources can be published.
 
-<a id='publish'></a>
+<a id='publish' class='anchor'></a>
 ## tdtadmin/resources
 
 The most important resource in our framework is called tdtadmin/resources. This resource holds a list of resource definitions that allow data to be read and published to the web. In order to know which meta-data to pass to create a resource definition, you'll have to check out our tdtinfo/admin document. This document holds the information about which meta-data needs to be passed for which data source type you want to publish. On this page we'll provide some examples that should get you started at publishing data.

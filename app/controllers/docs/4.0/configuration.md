@@ -10,7 +10,7 @@ The configuration is entirely handled by the Laravel framework, if you encounter
 
 The sections below are a summary of what the important parts of the configuration are.
 
-<a id='production'></a>
+<a id='production' class='anchor'></a>
 ## Production
 
 For production purposes, there's little configuration necessary. The only thing you have to do is head down the config folder located relatively to the root of the application at <em>app\config</em>.
@@ -71,12 +71,12 @@ return array(
 
 That's all there is to it!
 
-<a id='development'></a>
+<a id='development' class='anchor'></a>
 ## Development
 
 If you're planning on getting your hands dirty with The DataTank, you'll need to read up on how to configure environments in the [Laravel configuration documentation](http://four.laravel.com/docs/configuration#environment-configuration). In short, in order to load your database for development (e.g. localhost) only, you need to create a folder called <em>local</em> in the <em>app/config</em> folder, and make sure the environment is recognized by Laravel. This is done by adding your host name to the <em>$env</em> variable in the <em>bootstrap/start.php</em> file. Don't forget to add this file to the .gitignore file.
 
-<a id='unittesting'></a>
+<a id='unittesting' class='anchor'></a>
 ## Unit testing
 
 If you want to run the unittests, to check if everything is still ok after adjustments or to test your own additional tests, go to the root of the application and perform the simple command:

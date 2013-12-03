@@ -4,7 +4,7 @@ On this page you will learn how you can
 
 * [Request data from The DataTank](#request)
 
-<a id='request'></a>
+<a id='request' class='anchor'></a>
 ## Requesting data
 
 The DataTank makes data available through a REST interface. This means that data extracted from a certain data structure is available through HTTP. Just as any other operation of functionality, the discovery document shows us where to go!

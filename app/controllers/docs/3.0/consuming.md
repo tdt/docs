@@ -6,7 +6,7 @@ On this page you will learn how to
 * [filter data](#filter)
 * [visualize data](*visualize)
 
-<a id='get'></a>
+<a id='get' class='anchor'></a>
 ## Reading data in a RESTful way
 
 The DataTank makes data available through a REST interface. This means data added to The DataTank instance, is available through the uniform HTTP interface, making it interoperable with any web client. Data can be read by sending a simple GET request to a URI. This URI is created when the data was added under the provided package and resource, and typically follows the following pattern: http://{datatank_host}/{packagename}/{resourcename}. For example, if your DataTank is installed at http://foo/, and you added a resource “restaurants” under package “london”, you can then get the data by going to http://foo/london/restaurants.
@@ -20,7 +20,7 @@ Another part of reading data through the web is paging, in the datatank we imple
 
 The first url will return the first 20 items, and will give a link towards http://foo/data/paged\_data.json?page=2&page\_size=20, if there are more than 20 entries in the datasource. The second uri will return entry 5 till 15 in comparison.
 
-<a id='filter'></a>
+<a id='filter' class='anchor'></a>
 ## Filter data
 
 On The DataTank you can also filter data using our own filter language which has some small resemblences with HTSQL, and is called SPECTQL.
@@ -151,7 +151,7 @@ When given one integer, the limit function will use that as a maximum amount of 
 
 * http://foo//spectql/forests/greenwood{*}.limit(2,5):json
 
-<a id='visualize'></a>
+<a id='visualize' class='anchor'></a>
 ## Visualize data
 
 In addition to our raw format representations of data, we also provide some visualizations of data.
