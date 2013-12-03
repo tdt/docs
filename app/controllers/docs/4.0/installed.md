@@ -21,12 +21,10 @@ installed: {
     description: "Create a definition that allows for publication of data inside a Installed datastructure.",
     parameters: {
         ...
-
         description: {
             required: true,
             description: "The descriptive or informational string that provides some context for you published dataset."
         },
-
         ...
         class: {
             required: true,
