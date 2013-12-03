@@ -5,7 +5,7 @@ On this page you will learn how you can
 * [Request data from The DataTank](#request)
 * [Add parameters to a request](#params)
 
-<a id='request'></a>
+<a id='request' class="anchor"></a>
 ## Requesting data
 
 The DataTank makes data available through a REST interface. This means that data extracted from a certain data structure is available through HTTP. Just as any other operation of functionality, the discovery document shows us where to go!
@@ -55,7 +55,7 @@ As you can see every entry has a description that is retrieved from the definiti
 
 This is all you need to know in order to get a glimp of what datasources are available and on which uri they are retrievable.
 
-<a id="params"></a>
+<a id="params" class="anchor"></a>
 ## Request parameters
 
 There are two ways you can add parameters to a get request in order to retrieve data, namely required and optional parameters. <em>Optional parameters</em> are just like your average request parameters you pass along with a URI, using the query string.
