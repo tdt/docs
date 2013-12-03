@@ -36,8 +36,12 @@ To install the latest version of core execute the following commands
     $ composer create-project tdt/core
     $ composer update
 
-If, for some reason, you haven't installed The DataTank through the create-project command, there's a chance that some commands haven't been executed that are necessary.
-One of them might be the deployment of basic users, in order to do this manually execute the following after (!) you have performed the composer update command.
+
+
+**Note**
+
+If you haven't installed The DataTank through the create-project command, there's a chance that some commands haven't been executed that are necessary.
+One of them might be the deployment of basic users and group, in order to do this manually execute the following after (!) you have performed the composer update command.
 
     $ php artisan db:seed
 
