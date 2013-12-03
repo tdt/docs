@@ -11,6 +11,7 @@
     - [Delete]({url}/definitions#delete)
     - [Update]({url}/definitions#patch)
     - [Source types]({url}/source_types)
+    - [Installed resource]({url}/installed)
 - Consuming data
     - [Basic Usage]({url}/consuming_data)
     - [Notes]({url}/notes)
