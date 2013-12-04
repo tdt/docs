@@ -8,6 +8,7 @@
 
         <link rel='stylesheet' href='{{ URL::to("css/style.css") }}' type='text/css'/>
 
+        <link href='//fonts.googleapis.com/css?family=Varela+Round|Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
     </head>

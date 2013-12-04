@@ -46,6 +46,8 @@ body {
     box-shadow: 0px none;
     height: $header-height;
     margin-bottom: 0px;
+    font-family: 'Varela Round';
+    font-weight: normal;
 
     .navbar-brand{
         padding-top: 0px;
@@ -53,10 +55,11 @@ body {
         border-bottom: 0px none;
 
         img{
-            width: $header-height - 10;
-            height: $header-height - 10;
-            margin: 5px 0px;
+            width: $header-height -15;
+            height: $header-height - 15;
+            margin: 4px 0px;
             margin-right: 10px;
+            margin-bottom: 10px;
             display: inline-block;
         }
 
@@ -64,7 +67,7 @@ body {
             display: inline-block;
             font-size: 20px;
             color: #fff;
-            font-weight: 300;
+            font-weight: 100;
         }
     }
 
