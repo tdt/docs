@@ -48,7 +48,7 @@ A snippet is of this file is
         'Illuminate\Cache\CacheServiceProvider',
         'Illuminate\Foundation\Providers\CommandCreatorServiceProvider',
         ...
-        'tdt\Input\InputServiceProvider',
+        'tdt\input\InputServiceProvider',
     )
 </pre>
 
