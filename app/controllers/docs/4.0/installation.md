@@ -13,6 +13,7 @@ The DataTank requires a server with
 * Apache2 or Nginx
 * mod rewrite enabled
 * PHP 5.4 or higher
+* Git
 * Any database supported by [Laravel 4](http://four.laravel.com/docs/database)
 
 If you're using a <strong>Unix</strong> system, the easiest way to meet these requirements is to perform the following commands:
@@ -25,38 +26,28 @@ If you're using a <strong>Windows</strong> system, you'll have to download a web
 <a id='installation' class='anchor'></a>
 ## Installation
 
-### Command line
+### Preparations
 
-An installation through the command line requires the installation of [composer](http://getcomposer.org/).
+An installation through the command line requires the installation of [composer](http://getcomposer.org/). Make sure you have it downloaded properly and ready to use. Next to that you'll need to prepare a database with a user that has read & write permissions for The DataTank to use.
 
-#### Install core
+#### Install the application
 
-To install the latest version of core execute the following commands
+To install, open up a terminal and clone our repository
 
-    $ composer create-project tdt/core
-    $ composer update
+    git clone https://github.com/tdt/core.git
 
+#### Configure the database
 
+Provide your database credentials in the `app/config/database.php` file, according to the [Laravel database configuration](http://laravel.com/docs/configuration).
 
->**<i class='fa fa-info-circle'></i>Note**
->
->If you haven't installed The DataTank through the create-project command, there's a chance that some commands haven't been executed that are necessary.
->One of them might be the deployment of basic users and group, in order to do this manually execute the following after (!) you have performed the composer update command.
->
->    `$ php artisan db:seed`
+After that you're ready to make composer work his magic! Run the following command from the root of the folder where you cloned the repository:
+
+    composer install
 
 #### Get started with our demo data
 
 In order to get you started, we've provided a seeder that publishes a set of data files. This can be done with the following command:
 
-    $ php artisan db:seed --class=DemoDataSeeder
+    php artisan db:seed --class=DemoDataSeeder
 
-This will publish some data sets (mostly the same ones used for our unittesting) to some self-explanatory uri's. For example CSV files will be published under the collection uri 'csv', SHP files under 'shp', and so on and so forth.
-Note that any personal related data is generated at random, and any resemblances to real data is purely coincidental.
-
-#### Install docs
-
-As a last pointer, we suggest you install our documentation pages locally so that they can be addressed at all times. To install the latest version of our documentation execute the following commands
-
-    $ composer create-project tdt/docs
-    $ composer update
+This will publish some data sets to some self-explanatory uri's. For example CSV files will be published under the collection uri 'csv', JSON files under 'json', and so on and so forth.
