@@ -51,3 +51,12 @@ In order to get you started, we've provided a seeder that publishes a set of dat
     php artisan db:seed --class=DemoDataSeeder
 
 This will publish some data sets to some self-explanatory uri's. For example CSV files will be published under the collection uri 'csv', JSON files under 'json', and so on and so forth.
+
+#### Get started with our user interface
+
+We've created a user interface to manage datasets and users on the uri api/admin, relative to the root uri. The default credentials are:
+
+    user: admin
+    password: admin
+
+Best practice is to change the admin password immediatly by editing it using the user interface. Click the question mark <i class='fa fa-lg fa-question-circle'></i> in the user interface to start the help guide.
