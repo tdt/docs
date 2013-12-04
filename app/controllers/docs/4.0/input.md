@@ -17,7 +17,7 @@ Because we're embedding this functionality as a package in our core application 
 <a id='install' class='anchor'></a>
 ## Installing input
 
-The installation is fairly simple and can be done by telling the core application that tdt/input is now a required package. This can be done by updating the require section of the composer.json file, located in your root application folder.
+The installation is fairly simple and can be done by telling the core application that tdt/input is now a required package. This can be done by editing the require section of the composer.json file, located in your root application folder.
 
 Note that the commands listed are assumed to be executed from the root folder of the datatank application.
 
@@ -35,6 +35,22 @@ After the composer.json changed, you need to let composer know that a new depend
 The next thing you need to do is to create the datatables necessary for input to store its information. This can be done by executing the following command:
 
     $ php artisan migrate --package=tdt/input
+
+Now that everything is set and done, you'll have to let the core application know that it has a package it needs to approach. Unfortunately this has to be done manually in Laravel 4, by adding the [service provider](http://four.laravel.com/docs/packages#service-providers) to the providers array entry in the <em>app.php</em> file located in the <em>app/config</em> folder.
+
+A snippet is of this file is
+
+<pre class="prettyprint linenums">
+    'providers' => array(
+
+        'Illuminate\Foundation\Providers\ArtisanServiceProvider',
+        'Illuminate\Auth\AuthServiceProvider',
+        'Illuminate\Cache\CacheServiceProvider',
+        'Illuminate\Foundation\Providers\CommandCreatorServiceProvider',
+        ...
+        'tdt\Input\InputServiceProvider',
+    )
+</pre>
 
 ## Developping input
 
