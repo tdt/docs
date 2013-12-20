@@ -18,10 +18,24 @@ The DataTank requires a server with
 
 If you're using a <strong>Unix</strong> system, the easiest way to meet these requirements is to perform the following commands:
 
-    $ apt-get install apache2 php5 mysql-server php5-dev php5-memcache memcached
+    $ apt-get install apache2 php5 mysql-server php5-dev php5-memcache memcached php5-curl
     $ a2enmod rewrite
 
 If you're using a <strong>Windows</strong> system, you'll have to download a web stack that holds the necessary requirements.
+
+Set the rewrite rules in <code>/etc/apache2/sites-available/default</code> to <code>ALL</code>:
+
+    <Directory />
+        Options FollowSymLinks
+        AllowOverride All
+    </Directory>
+    <Directory /var/www/>
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+        Order allow,deny
+        allow from all
+    </Directory>
+
 
 <a id='installation' class='anchor'></a>
 ## Installation
@@ -43,6 +57,12 @@ Provide your database credentials in the `app/config/database.php` file, accordi
 After that you're ready to make composer work his magic! Run the following command from the root of the folder where you cloned the repository:
 
     composer install
+    
+#### Add permissions to the log directory
+
+To store logs and other files, the right permissions need to be set:
+
+    $ chmod -R  777 /var/www/tdt/app/storage/
 
 #### Get started with our demo data
 
