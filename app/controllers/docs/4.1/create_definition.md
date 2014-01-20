@@ -34,7 +34,7 @@ The discovery document shows a list of methods that one can perform on the resou
                 "put": {
                     "httpMethod": "PUT",
                     "path": "/definitions/{identifier}",
-                    "description": "Add a resource definition identified by the {identifier} value, and of the type identified by the content type header value {mediaType}. The {identifier} consists of 1 or more collection identifiers, followed by a final resource name. (e.g. world/demography/2013/seniors)",
+                    "description": "Add a resource definition identified by the {identifier} value,. The {identifier} consists of 1 or more collection identifiers, followed by a final resource name. (e.g. world/demography/2013/seniors). Valid characters that can be used are alphanumerical, underscores and whitespaces.",
                     "contentType": "application/tdt.definitions+json",
                     "mediaType": {
                         "csv": {
@@ -57,7 +57,7 @@ The discovery document shows a list of methods that one can perform on the resou
                                 },
                                 "description": {
                                     "required": true,
-                                    "description": "The descriptive or informational string that provides some context for you published dataset."
+                                    "description": "The descriptive or informational string that provides some context for your published dataset."
                                 },
                                 "publisher": {
                                     "required": false,
