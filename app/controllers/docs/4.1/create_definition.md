@@ -9,7 +9,9 @@ On this page you will learn
 
 Our core functionality is to extract data from a certain data structure and provide this content to the user using HTTP. As described in our introduction pages, in order to extract data we need some meta-data telling us how to do that. This set of meta-data is called a resource definition, or - shorter - definition.
 
-What follows is a list of steps a maintainer of a datatank has to take in order to create a new definition so that data can be published from a certain data file. This small tutorial assumes that a datatank is hosted on http://foo and explains all the basics of the discovery document. A fair bit of reading, but essential nonetheless!
+What follows is a list of steps a maintainer of a datatank has to take in order to create a new definition so that data can be published from a certain data file. This small tutorial assumes that a datatank is hosted on http://foo and explains the basics of the discovery document. A fair bit of reading, but essential nonetheless!
+
+If you don't feel like doing all this manual technical stuff, you can do everything through a [user interface](4.1/ui_introduction).
 
 ### Set up the resource definition template
 
@@ -33,11 +35,18 @@ The discovery document shows a list of methods that one can perform on the resou
                     "httpMethod": "PUT",
                     "path": "/definitions/{identifier}",
                     "description": "Add a resource definition identified by the {identifier} value, and of the type identified by the content type header value {mediaType}. The {identifier} consists of 1 or more collection identifiers, followed by a final resource name. (e.g. world/demography/2013/seniors)",
-                    "contentType": "application/tdt.{mediaType}",
+                    "contentType": "application/tdt.definitions+json",
                     "mediaType": {
                         "csv": {
                             "description": "Create a definition that allows for publication of data inside a Csv datastructure.",
                             "parameters": {
+                                type: {
+                                    required: true,
+                                    name: "type",
+                                    description: "The type of the data source.",
+                                    type: "string",
+                                    value: "csv"
+                                },
                                 "title": {
                                     "required": false,
                                     "description": "A name given to the resource."
@@ -73,11 +82,11 @@ The discovery document shows a list of methods that one can perform on the resou
 </pre>
 
 If we take a look at the definitions resource we notice that it has a property called <b>methods</b>. This identifies all the methods the definitions resource can handle.
-Note that these methods do not always have a 1-1 translation to HTTP methods, which this document happens to have. Going by description of the  <b>put</b> method we know that we have to use this method, identified by a HTTP PUT method, to create a new resource definition.
+Note that the name of the methods do not always have a 1-1 translation to HTTP methods, which this document happens to have. Going by the description of the <b>put</b> method we know that we have to use this method, identified by a HTTP PUT method, to create a new resource definition.
 
-The document also provides us a `path` property which tells us to which path we have to use, relative to the <b>rootUrl</b> property of the discovery document, to perform our HTTP request to. The path also contains an {identifier} piece which servers as an identifier for the resource definition you want to add, the curly braces indiciate that this is variable field and needs to be filled in.
+The document also provides us a `path` property which tells us which path we have to use, relative to the <b>rootUrl</b> property of the discovery document, to perform our HTTP request to. The path also contains an {identifier} piece which servers as an identifier for the resource definition you want to add, the curly braces indiciate that this is variable field and needs to be filled in.
 
-From the description we can understand that the identifier consists of a collection part and a naming part. In this tutorial we're going to publish data about trees, we have 3 datasets in total, data from 2011, 2012 and 2013. Our collection uri will be "trees" and the name of the resource will be the year that the data is relevant to, leading to the following structure:
+From the description we can derive that the identifier consists of a collection part and a resource-naming part. In this tutorial we're going to publish data about trees, we have 3 datasets in total, data from 2011, 2012 and 2013. Our collection uri will be "trees" and the name of the resource will be the year that the data is relevant to, leading to the following structure:
 
 * http://foo/api/definitions/trees/2011
 * http://foo/api/definitions/trees/2012
@@ -87,11 +96,11 @@ Note that we can only add 1 resource definition per method call.
 
 Ok! Now you know what the discovery document is all about and how to use it, let's recap what we know so far.
 
-We know which method to use, and to which URI we must perform the request, the next step is to figure out which meta-data we have pass along with the request.
+We know which method to use, and to which URI we must perform the request, the next step is to figure out which meta-data we have to pass along with the request.
 
-For the sake of this example we'll assume that the data we want to publish is a CSV file. The supported data structures that are supported by the datatank are listed as <b>mediaType</b> and are part of the put method. If we take a look at our snapshot above we see that <em>csv</em> is listed, so we know we can publish CSV data!
+For the sake of this example we'll assume that the data we want to publish is a CSV file. The data structures that are supported by the datatank are listed as properties of the put method. If we take a look at our snapshot above we see that <em>csv</em> is listed, so we know we can publish CSV data!
 
-The mediaType also identifies what value we have to pass with the Content-Type header, identified by the `contentType` property of the method, this consists of a small template that takes the name of the data structure, in our case csv.
+>> The Content-Type header is optional, just make sure your HTTP request doesn't contain any other default Content-Type header.
 
 Assuming we work in a PHP environment to create an HTTP call using cURL, we can already construct the following:
 
@@ -118,7 +127,7 @@ $options = array(
     CURLOPT_FORBID_REUSE => 1,
     CURLOPT_TIMEOUT => 4,
     CURLOPT_POSTFIELDS => json_encode($put),
-    CURLOPT_HTTPHEADER => array("Content-Type: application/tdt.csv"),
+    CURLOPT_HTTPHEADER => array("Content-Type: application/tdt.definitions+json"),
 );
 
 // Set the configuration of the curl request
@@ -129,12 +138,12 @@ $response = curl_exec($ch);
 
 ### Filling in the definition template
 
-Now we have a our basic parameters filled in to make our request, now all we need to do is fill in the required parameters, and some other meta-data properties if we like.
-Again we look at the discovery document, which tells us that in case we need to publish a CSV file, we need to pass 2 required parameters namely <em>description</em> and <em>uri</em>.
+Now we have a our basic parameters filled in to make our request, all we need to do is fill in the required parameters, and some other meta-data properties if we like.
+Again we look at the discovery document, which tells us that in for a CSV datasource, we need to pass 3 required parameters namely <em>description</em>, <em>uri</em> and <em>type</em>. Note that type is always filled in already, so you just need to copy its content.
 
-Going by the description of each of the two parameters we know that we have to pass a small informational, descriptive text about our dataset, and a uri that can be accessed by the datatank to extract the data from.
+Going by the description of each of the parameters we know that we have to pass a small informational, descriptive text about our dataset, and a uri that can be accessed by the datatank to extract the data from.
 
-Other meta-data properties are optional, for the sake of this tutorial we'll assume that our delimiter isn't the default one used by the datatank - which is a comma - and that our CSV starts line 1 and not 0.
+Other meta-data properties are indicated as optional, this is the case when the property "required" is set to false. Our example CSV files happen to have a semi-colon as a delimiter, which is different from the default value that the property "delimiter" has.
 
 <pre class="prettyprint linenums">
 
@@ -160,6 +169,7 @@ $put = array(
     "description" => "Tree data taken in the year 2011 in the foo forest.",
     "delimiter" => ";",
     "uri" => http://bar/data/trees/2011.csv",
+    "type" => "csv",
 );
 
 // Create the general configurations for the curl request
@@ -182,7 +192,7 @@ curl_setopt_array($ch, $options);
 $response = curl_exec($ch);
 </pre>
 
-Executing this script will lead to the addition of a resource definition, and will return a response in which the "Location"-header links to the actual retrieval uri of the data. This means that when you execute a put method, 2 things will happen:
+When this call returns successfully, 2 things will have changed to your datatank:
 
 * a new resource definition will be added to the definitions resource
 * a uri identified by {identifier} will now return data extracted from the data source that the definition describes

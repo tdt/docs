@@ -6,11 +6,10 @@ class HomeController extends BaseController {
 
 	public function handleRequest(){
 
-        // TODO create page not found page
+        // TODO create "page not found" page
         $uri = Request::path();
 
         // Default version of the documentation
-        // TODO: have a default introduction (landing) page for every version?
         $version = "4.0";
         $page = 'introduction';
 
