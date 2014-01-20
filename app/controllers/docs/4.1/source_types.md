@@ -105,7 +105,7 @@ If you want to provide relationships with the GeoProperty or TabularColumns mode
 
 After this you might want to update your class loader so this class is recognized:
 
-	$ root > php artisan dump-autoload
+	$ php artisan dump-autoload
 
 If you head down to the discovery document, you'll see that your Foo is now picked up as a source type that can be added. There's one essential step left in order to make this work though and that is the configuration of our database table that holds our parameters for our Foo model.
 

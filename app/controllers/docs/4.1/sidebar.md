@@ -10,8 +10,10 @@
     - [Read]({url}/definitions#get)
     - [Delete]({url}/definitions#delete)
     - [Update]({url}/definitions#patch)
+- Advanced
     - [Installed resource]({url}/installed)
     - [Source types]({url}/source_types)
+    - [SPARQL]({url}/sparql)
 - Consuming data
     - [Basic Usage]({url}/consuming_data)
     - [Notes]({url}/notes)
