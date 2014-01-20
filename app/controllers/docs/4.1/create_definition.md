@@ -11,7 +11,7 @@ Our core functionality is to extract data from a certain data structure and prov
 
 What follows is a list of steps a maintainer of a datatank has to take in order to create a new definition so that data can be published from a certain data file. This small tutorial assumes that a datatank is hosted on http://foo and explains the basics of the discovery document. A fair bit of reading, but essential nonetheless!
 
-If you don't feel like doing all this manual technical stuff, you can do everything through a [user interface](4.1/ui_introduction).
+If you don't feel like doing all this manual technical stuff, you can do everything through a [user interface](/4.1/ui_introduction).
 
 ### Set up the resource definition template
 

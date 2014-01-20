@@ -61,7 +61,17 @@ This means that you don't need to include it in your composer.json file but rath
     $ cd workbench
     $ git clone git@github.com:tdt/input.git
 
-In order to migrate the workbench package (given that the directory in which input is cloned into is called input), execute the following command:
+After that install the necessary dependencies for the input package by going to the workbench input package and running the composer install command:
+
+    $ cd workbench/input
+    $ composer install
+
+Now that the dependencies have been installed, we have to inform the autoloader that new classes have been added, this is done using artisan located in the root directory:
+
+    $ cd ../.. (go to the root again)
+    $ php artisan dump-autoload
+
+In order to migrate the workbench package execute the following command:
 
     $ php artisan migrate --bench=input
 
@@ -69,6 +79,3 @@ Creating a migration goes down the same way:
 
     $ php artisan migrate:make --bench=input
 
-Do note that you need to use the artisan autoload generator, and not the composer one if you're working with the workbench:
-
-    $ php artisan dump-autoload

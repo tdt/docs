@@ -21,6 +21,8 @@ The documentation that you can find through the sidebar is relevant for the [inp
 
     For example if I want to publish a CSV file, I'd have to pass along the uri of where that file is located, and what character is used to delimit the values in order to have a basic set of information that allows extraction out of the file.
 
+    This can either be done using [our API](/4.1/create_definition) or using our [user interface](/4.1/ui_introduction)
+
 2. Requesting data
 
     By providing enough information to read data we can extract the data and provide it to the user. When a user requests some data, The DataTank will read the data structure on the fly and return the data in the requested format (e.g. JSON, XML, PHP, ..).
