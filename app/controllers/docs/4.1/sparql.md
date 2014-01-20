@@ -16,13 +16,15 @@ The parameter is identified by ${identifier} in the query itself and is here use
 
 When someone requests your published SPARQL query the parameter string, ${identifier}, will be entirely replaced by the query string parameter value the user passes along with its request.
 
-For example when a user passes this uri: http://foo/sparql/query.json?graph\_name=http://foobar%26version1 the query will look like this:
+For example when a user passes this uri: http://foo/sparql/query.json?graph\_name=http://foobar%23version1 the query will look like this:
 
 <pre class='prettyprint'>
     SELECT * from { GRAPH <http://foobar#version1> { ?s ?p ?o. }}
 </pre>
 
 This query will then be executed to the SPARQL endpoint and the proper response will be returned.
+
+>> Caveat lector: since hashtags are quite often used in the semantic world, you'll find yourself passing one in as a query string parameter. Make sure you encode it first (%23 = #) before entering it in your URI, the datatank can't fetch it if you don't.
 
 ## Semantic vs non-semantic results
 
