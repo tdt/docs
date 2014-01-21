@@ -4,6 +4,7 @@ In this section you will learn
 
 * [How to configure a job](#job)
 * [How to execute a job](#execute)
+* [Exporting and importing jobs](#manage)
 * [Overview of jobs](#overview)
 
 <a id='job' class='anchor'></a>
@@ -100,7 +101,24 @@ Executing a job is very easy, simply pass along the identifier of the job you wa
 
     $ php artisan input:execute foo/bar
 
-Every configured step of the job (extraction, mapping and loading) will provide output to the console, so if you might want to consider piping the execution of the command to a log file.
+Every configured step of the job (extraction, mapping and loading) will provide output to the console, so if you might want to consider piping the execution of the command to a log file. Note that all commands that are run by artisan have a similar interface, use --help for example on any command and you'll get the description of the command accompanied by a list of available options and arguments.
+
+<a id='manage' class='anchor'></a>
+## Exporting and importing jobs
+
+Often when a datatank is running in a stable environment, changes and test cases will be deployed in a different environment and when proven viable transported to the production environment. This can be done by a few simple commands we have provided:
+
+    $ php artisan input:export
+
+This command will export every job definition to a JSON file, the default path of this file can be found by using the --help option on the command:
+
+    $ php artisan input:export --help
+
+This json file can then be used to import all of the exported job definitions into the datatank:
+
+    $ php artisan input:import
+
+Note that both of the commands can take some options and arguments such as passing along a custom file name to write the export to.
 
 <a id='overview' class='anchor'></a>
 ## Overview
