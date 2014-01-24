@@ -14,6 +14,7 @@
     - [Installed resource]({url}/installed)
     - [Source types]({url}/source_types)
     - [SPARQL]({url}/sparql)
+    - [Management]({url}/management)
 - Consuming data
     - [Basic Usage]({url}/consuming_data)
     - [Notes]({url}/notes)
