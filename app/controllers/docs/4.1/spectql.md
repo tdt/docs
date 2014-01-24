@@ -1,4 +1,4 @@
-# SPECTQL
+# SpectQL
 
 On this page you will learn
 
@@ -97,4 +97,16 @@ Let's analyse these queries one by one in order to know what each of them does.
 
 <a id="limits" class="anchor"></a>
 ## Limitations of spectql
-// TODO not on semantic data, size is an issue
+
+Spectql is a fun feature of our application in order to provide you with information you want from a certain data source, however there are a few limitations.
+
+1. Size matters
+
+    The spectql queries are processed post extraction time, this means that before any spectql filter is executed, the entire data source will be extracted and put into memory.
+    Once the entire object has been read, the spectql query will be applied to that entire object. Large datasource will sometimes cause a timeout on the server because the amount of resources
+    will be too high.
+
+2. Raw data only
+
+    Semantic data will not be eligible to query though spectql for the simple reason that semantic data has a complete different approach towards representation, structure and therefore handling than pure raw data.
+    However, we do provide the possibility to [publish SPARQL queries](/4.1/sparql) through the datatank so that using a query language such as spectql becomes obsolete for semantic data.
