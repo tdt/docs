@@ -37,11 +37,11 @@ We see that there is a listing of datatank commands:
 
     // TODO
 
-    $ php artisan core:export --help
+    $ php artisan datatank:export --help
 
 <pre class="prettyprint linenums">
 Usage:
-core:export [-u|--users] [-f|--file[="..."]]
+datatank:export [-u|--users] [-f|--file[="..."]]
 
 Options:
  --users (-u)          Export the users, if this option is not given the command will export the definitions.
