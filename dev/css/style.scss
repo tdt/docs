@@ -342,3 +342,24 @@ blockquote{
 
 }
 
+.dropdown-menu {
+    margin: 0px;
+    padding: 0px;
+    min-width: 100%;
+    margin-top: -1px !important;
+    border-radius: 0px !important;
+
+    li a{
+        color: $primary !important;
+        text-align: center;
+
+        &:hover, &:focus{
+            color: #fff !important;
+        }
+    }
+}
+
+.nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+    background: #1f4353 !important;
+}
+

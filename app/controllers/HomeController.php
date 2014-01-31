@@ -10,8 +10,9 @@ class HomeController extends BaseController {
         $uri = Request::path();
 
         // Default version of the documentation
-        $version = "4.0";
+        $version = "4.1";
         $page = 'introduction';
+        $versions = array("4.0", "4.1");
 
         // If not the root, then split the uri to find the content
         $segment1 = Request::segment(1);
@@ -42,6 +43,7 @@ class HomeController extends BaseController {
 
             return View::make('layouts.master')
                         ->with('version', $version)
+                        ->with('versions', $versions)
                         ->with('sidebar', $sidebar_html)
                         ->with('content', $contents_html);
 

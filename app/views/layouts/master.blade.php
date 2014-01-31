@@ -11,14 +11,26 @@
         <link href='//fonts.googleapis.com/css?family=Varela+Round|Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+        <script src="{{ URL::to('js/bootstrap.min.js') }}"></script>
     </head>
 
     <body>
         <nav class="navbar navbar-fixed-top">
             <a class="navbar-brand" href="{{ URL::to('') }} ">
                 <img src='{{ URL::to("img/logo.png") }}' alt='Datatank logo' />
-                <h1>The DataTank {{ $version }} documentation</h1>
+                <h1>The DataTank documentation</h1>
             </a>
+
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Version {{ $version }} <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        @foreach($versions as $v)
+                            <li><a href="{{ URL::to($v) }}">{{ $v }}</a></li>
+                        @endforeach
+                    </ul>
+                </li>
+            </ul>
         </nav>
 
         <div id='sidebar-background' class='hidden-xs hidden-sm'></div>
