@@ -24,7 +24,7 @@ For example when a user passes this uri: http://foo/sparql/query.json?graph\_nam
 
 This query will then be executed to the SPARQL endpoint and the proper response will be returned.
 
->> Caveat lector: since hashtags are quite often used in the semantic world, you'll find yourself passing one in as a query string parameter. Make sure you encode it first (%23 = #) before entering it in your URI, the datatank can't fetch it if you don't.
+>> CAVEAT: since hashtags are quite often used in the semantic world, you'll find yourself passing one in as a query string parameter. Make sure you encode it first (%23 = #) before entering it in your URI, the datatank can't fetch it if you don't.
 
 ## Semantic vs non-semantic results
 
