@@ -5,6 +5,7 @@
     - [Installation]({url}/installation)
     - [Configuration]({url}/configuration)
     - [Errors]({url}/errors)
+    - [Updating]({url}/updating)
 - Resource Definitions
     - [Create]({url}/create_definition)
     - [Read]({url}/definitions#get)
@@ -24,3 +25,6 @@
 - Input
 	- [Introduction]({url}/input)
 	- [Usage]({url}/input_usage)
+    - [Management]({url}/input_management)
+- Changelog
+    - [Overview]({url}/changelog)
