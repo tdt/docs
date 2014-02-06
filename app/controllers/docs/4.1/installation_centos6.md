@@ -11,7 +11,7 @@ Thus, there are two choices when it comes to running The DataTank on CentOS 6 --
 
 When feasible, upgrading PHP to 5.4.x is perhaps the better option, because it enables forward-compatibility and will support the full complement of PHPUnit tests.  [Daniel Heramb](http://danielheramb.blogspot.com/2013/03/how-to-install-laravel-on-linux.html) has written some good instructions on installing PHP 5.4 as part of a Laravel installation. 
 
-But there may be compelling reasons for remaining on PHP 5.3.3, either due to organizational preference for utilizing default packages, or because it may be necessary to maintain 5.3.x compatibility for other PHP applications running on the server. Drupal 7, for example, will run on PHP 5.4, but "prefers" 5.3, and may generate a rather large number of warnings when running PHP 5.4. 
+But there may be compelling reasons for remaining on PHP 5.3.3. There may be an organizational preference for utilizing default packages, or it may be necessary to maintain 5.3.x compatibility for other PHP applications running on the server. Drupal 7, for example, will run on PHP 5.4, but "prefers" 5.3, and may generate a rather large number of warnings when running PHP 5.4. 
 
 For cases where remaining on PHP 5.3.3 is considered the best option, the following installation instructions may be used. They have been successfully tested on a virtual machine running a fresh installation of CentOS 6.5. Additionally, many of the steps below will also be of use to those installing The DataTank on top of PHP 5.4.x on a Red Hat-family Linux distribution, as they reflect a yum-based installation, Red Hat-flavored directory structures, and instructions on a required SELinux security configuration.
 
