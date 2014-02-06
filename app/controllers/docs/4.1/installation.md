@@ -23,7 +23,7 @@ If you're using a <strong>Unix</strong> system that supports <strong>apt-get</s
 
 If you're using a <strong>Linux</strong> distribution derived from the Red Hat family, or which uses the <strong>yum</strong> package manager, you may need to follow the [CentOS 6](installation_centos6.md) installation instructions.
 
-If you're using a <strong>Windows</strong> system, you'll have to download a web stack that holds the necessary requirements, such as [WAMPServer](http://www.wampserver.com/en/), plus [msysgit](http://msysgit.github.io/)
+If you're using a <strong>Windows</strong> system, you'll have to download a web stack that holds the necessary requirements, such as [WAMPServer](http://www.wampserver.com/en/), plus [msysgit](http://msysgit.github.io/).
 
 Set the rewrite rules in <code>/etc/apache2/sites-available/default</code> to <code>ALL</code>:
 
