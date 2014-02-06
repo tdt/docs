@@ -56,7 +56,7 @@ With the EPEL repository installed, you will now be able to install these two PH
 	yum install php-mcrypt
 	yum install php-mbstring
 
-# Install Composer and download TheDataTank core
+# Install Composer and download tdt/core
 Use the following commands to install Composer and put it in the path:
 
 	curl -sS https://getcomposer.org/installer | php
