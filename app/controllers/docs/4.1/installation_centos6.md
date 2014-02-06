@@ -5,9 +5,9 @@ Background
 ----------
 When installing The DataTank, users of CentOS 6 will need to make a choice about what version of PHP they will be using to support the installation. As CentOS 6.5 is based on Red Hat Enterprise Linux - with its preference for older packages that have a proven track record of stability - the default installation of PHP is version 5.3.3.
 
-However, the Laravel 4.0 framework, which forms the foundation upon which TheDataTank is constructed, requires PHP 5.3.7 as the minimum version, and newer versions of Laravel bump that requirement up to PHP 5.4.0. Additionally, there are a number of [PHPUnit tests](https://github.com/tdt/core/issues/170) that come with TheDataTank which use syntax that requires by PHP 5.4 and above.
+However, the Laravel 4.0 framework, which forms the foundation upon which TheDataTank is constructed, requires PHP 5.3.7 as the minimum version, and newer versions of Laravel bump that requirement up to PHP 5.4.0. Additionally, there are a number of [PHPUnit tests](https://github.com/tdt/core/issues/170) that come with The DataTank which use syntax that requires by PHP 5.4 and above.
 
-Thus, there are two choices when it comes to running The DataTank on CentOS 6 -- either upgrade PHP to version 5.4.x, or make the modifications, detailed below, needed to install TheDataTank using the default PHP 5.3.3 installation.
+Thus, there are two choices when it comes to running The DataTank on CentOS 6 -- either upgrade PHP to version 5.4.x, or make the modifications, detailed below, needed to install The DataTank using the default PHP 5.3.3 installation.
 
 When feasible, upgrading PHP to 5.4.x is perhaps the better option, because it enables forward-compatibility and will support the full complement of PHPUnit tests.  [Daniel Heramb](http://danielheramb.blogspot.com/2013/03/how-to-install-laravel-on-linux.html) has written some good instructions on installing PHP 5.4 as part of a Laravel installation. 
 
