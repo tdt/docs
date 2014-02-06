@@ -119,7 +119,7 @@ Create a shortcut under Apache's content directory to the publicly exposed porti
     
 Edit the Apache configuration file,  located at /etc/httpd/conf/httpd.conf:
 
-* Under the configuration for <Directory "/var/www/html">, change <i>AllowOverride None</i> to <i>AllowOverride All</i>
+* Under the configuration for &lt;Directory "/var/www/html">, change <i>AllowOverride None</i> to <i>AllowOverride All</i>
     
 This directory needs to be made fully accessible to the application:
     
