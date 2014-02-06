@@ -16,12 +16,14 @@ The DataTank requires a server with
 * Git
 * Any database supported by [Laravel 4](http://four.laravel.com/docs/database)
 
-If you're using a <strong>Unix</strong> system, the easiest way to meet these requirements is to perform the following commands:
+If you're using a <strong>Unix</strong> system that supports the <strong>apt-get</strong> package manager, the easiest way to meet these requirements is to perform the following commands:
 
     $ apt-get install apache2 php5 mysql-server php5-dev php5-memcache memcached php5-curl
     $ a2enmod rewrite
 
-If you're using a <strong>Windows</strong> system, you'll have to download a web stack that holds the necessary requirements.
+If you're using a <strong>Linux</strong> distribution derived from the Red Hat family, or which uses the <strong>yum</strong> package manager, you may need to follow the [CentOS 6](installation_centos6.md) installation instructions.
+
+If you're using a <strong>Windows</strong> system, you'll have to download a web stack that holds the necessary requirements, such as [WAMPServer](http://www.wampserver.com/en/), plus [msysgit](http://msysgit.github.io/).
 
 Set the rewrite rules in <code>/etc/apache2/sites-available/default</code> to <code>ALL</code>:
 
