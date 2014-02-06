@@ -21,7 +21,7 @@ If you're using a <strong>Unix</strong> system that supports the <strong>apt-ge
     $ apt-get install apache2 php5 mysql-server php5-dev php5-memcache memcached php5-curl
     $ a2enmod rewrite
 
-If you're using a <strong>Linux</strong> distribution derived from the Red Hat family, or which uses the <strong>yum</strong> package manager, you may need to follow the [CentOS 6](installation_centos6.md) installation instructions.
+If you're using a <strong>Linux</strong> distribution derived from the Red Hat family, or which uses the <strong>yum</strong> package manager, you may need to follow the [CentOS 6](installation_centos6) installation instructions.
 
 If you're using a <strong>Windows</strong> system, you'll have to download a web stack that holds the necessary requirements, such as [WAMPServer](http://www.wampserver.com/en/), plus [msysgit](http://msysgit.github.io/).
 
@@ -59,7 +59,7 @@ Provide your database credentials in the `app/config/database.php` file, accordi
 After that you're ready to make composer work his magic! Run the following command from the root of the folder where you cloned the repository:
 
     composer install
-    
+
 #### Add permissions to the log directory
 
 To store logs and other files, the right permissions need to be set:
