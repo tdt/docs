@@ -21,6 +21,8 @@ Spectql is a query language used by the datatank and uses the URI to parse the q
 
     http://host/spectql/[identifier]{[selectors]}?$filters:[format]
 
+A more specific template is given on [spectql.org](http://spectql.org), not that this is an automatically generated visualization, making sure it's a charm for the eye will come soon.
+
 ### identifier
 
 The identifier of the data source on the datatank
@@ -43,9 +45,7 @@ Possible functions are:
 * min = returns the minimum value
 * sum = returns the sum of the values
 * ucase = returns the value in uppercase
-* upper = returns the value in uppercase
 * lcase = returns the value in lowercase
-* lower = returns the value in lowercase
 * len = returns the length of a value
 
 ### filters
@@ -92,6 +92,19 @@ Let's analyse these queries one by one in order to know what each of them does.
 3. http://host/spectql/foo/bar{avg(age)}?city=='Chicago':json
 
     This last query will return the average age of all the objects where the property city is equal to Chicago.
+
+
+A note to make is the name of the keys will be the same of the original dataset, unless a function has been used! Then the name will be concatenated to the original name of the key e.g.
+
+    select{ucase(firstname)}:json
+
+Then the result will be:
+
+<pre class='prettyprint'>
+    {
+        "ucase_firstname" : "JOHN"
+    }
+</pre>
 
 
 
