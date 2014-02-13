@@ -20,6 +20,8 @@ Another part of reading data through the web is paging, in the datatank we imple
 
 The first url will return the first 20 items, and will give a link towards http://foo/data/paged\_data.json?page=2&page\_size=20, if there are more than 20 entries in the datasource. The second uri will return entry 5 till 15 in comparison.
 
+If you request a limit or page_size of -1, then paging will not be applied. This means all of the data will be read and passed to the user and might give a memory allocation error internally, and a 500 externally to the user depending on how much memory is configured to PHP.
+
 <a id='filter' class='anchor'></a>
 ## Filter data
 
