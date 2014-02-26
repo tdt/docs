@@ -26,7 +26,8 @@ This query will then be executed to the SPARQL endpoint and the proper response 
 
 >> CAVEAT: since hashtags are quite often used in the semantic world, you'll find yourself passing one in as a query string parameter. Make sure you encode it first (%23 = #) before entering it in your URI, the datatank can't fetch it if you don't.
 
-Note that one can send multiple request parameters with the same identifier like this: http://foo/sparql?identifier=value1&identifier=value2.  In this case the SPARQL definition can refer to the distinct values by using ${identifier[0]} and ${identifier[1]}
+Note that one can add in one URI/request multiple request parameters using the same identifier. Like this: http://foo/sparql?identifier[]=value1&identifier[]=value2.  (Note: The [] behind the identifiers are an essential php-ism).
+SPARQL Query-Resources called upon in this fashion can refer to the distinct values of the resulting array by using indexed placeholders like ${identifier[0]} and ${identifier[1]} in the sparql-definition.
 
 ## Semantic vs non-semantic results
 
