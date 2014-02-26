@@ -9,7 +9,7 @@ Publishing SPARQL queries is done the same way you would publish any other data 
 Let's take a simple SPARQL query:
 
 <pre class='prettyprint'>
-    SELECT * from { GRAPH <${graph_name}> { ?s ?p ?o. }}
+    SELECT * from { GRAPH &lt;${graph_name}&gt; { ?s ?p ?o. }}
 </pre>
 
 The parameter is identified by ${identifier} in the query itself and is here used to identify the graph but don't let that hold you from using the parameter anywhere else, it can be used anywhere in the query and there's no limit to how many parameters you put in your query.
@@ -19,12 +19,14 @@ When someone requests your published SPARQL query the parameter string, ${identi
 For example when a user passes this uri: http://foo/sparql/query.json?graph\_name=http://foobar%23version1 the query will look like this:
 
 <pre class='prettyprint'>
-    SELECT * from { GRAPH <http://foobar#version1> { ?s ?p ?o. }}
+    SELECT * from { GRAPH &lt;http://foobar#version1&gt; { ?s ?p ?o. }}
 </pre>
 
 This query will then be executed to the SPARQL endpoint and the proper response will be returned.
 
 >> CAVEAT: since hashtags are quite often used in the semantic world, you'll find yourself passing one in as a query string parameter. Make sure you encode it first (%23 = #) before entering it in your URI, the datatank can't fetch it if you don't.
+
+Note that one can send multiple request parameters with the same identifier like this: http://foo/sparql?identifier=value1&identifier=value2.  In this case the SPARQL definition can refer to the distinct values by using ${identifier[0]} and ${identifier[1]}
 
 ## Semantic vs non-semantic results
 
