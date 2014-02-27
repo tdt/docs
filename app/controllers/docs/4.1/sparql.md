@@ -24,7 +24,7 @@ For example when a user passes this uri: http://foo/sparql/query.json?graph\_nam
 
 This query will then be executed to the SPARQL endpoint and the proper response will be returned.
 
->> CAVEAT: since hashtags are quite often used in the semantic world, you'll find yourself passing one in as a query string parameter. Make sure you encode it first (%23 = #) before entering it in your URI, the datatank can't fetch it if you don't.
+> CAVEAT: since hashtags are quite often used in the semantic world, you'll find yourself passing one in as a query string parameter. Make sure you encode it first (%23 = #) before entering it in your URI, the datatank can't fetch it if you don't.
 
 Note that one can send multiple request parameters with the same identifier like this: http://foo/sparql?identifier=value1&identifier=value2.  In this case the SPARQL definition can refer to the distinct values by using ${identifier[0]} and ${identifier[1]}
 
@@ -32,7 +32,7 @@ Note that one can send multiple request parameters with the same identifier like
 
 Publishing a SPARQL query, in contrast to other data sources, can return 2 types of results namely a semantic and a non-semantic one.
 
->> Currently we only support select and construct SPARQL queries.
+> Currently we only support select and construct SPARQL queries.
 
 When you define a construct query, the datatank will request an rdf+xml representation of the query result from the endpoint and load it into a [graph object](https://github.com/semsol/arc2/wiki). This graph will then be returned and by default formatted into a turtle representation.
 

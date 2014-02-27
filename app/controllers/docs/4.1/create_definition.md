@@ -100,7 +100,7 @@ We know which method to use, and to which URI we must perform the request, the n
 
 For the sake of this example we'll assume that the data we want to publish is a CSV file. The data structures that are supported by the datatank are listed as properties of the put method. If we take a look at our snapshot above we see that <em>csv</em> is listed, so we know we can publish CSV data!
 
->> The Content-Type header is optional, just make sure your HTTP request doesn't contain any other default Content-Type header.
+> The Content-Type header is optional, just make sure your HTTP request doesn't contain any other default Content-Type header.
 
 Assuming we work in a PHP environment to create an HTTP call using cURL, we can already construct the following:
 
