@@ -2,6 +2,8 @@
 
 On this page we will elaborate on how you can publish SPARQL queries.
 
+Make sure to read the caveats as they include some vital information on how the SPARQL readers works, and why it might not work in some cases.
+
 ## Templating
 
 Publishing SPARQL queries is done the same way you would publish any other data source. However, SPARQL queries have some extra flexibility. Since you're passing along SPARQL queries, it's possible to abstract them and replace certain values with variables.
@@ -35,3 +37,5 @@ Publishing a SPARQL query, in contrast to other data sources, can return 2 types
 When you define a construct query, the datatank will request an rdf+xml representation of the query result from the endpoint and load it into a [graph object](https://github.com/semsol/arc2/wiki). This graph will then be returned and by default formatted into a turtle representation.
 
 When you define a select query, the datatank will request a json representation and will handle it as raw data, just like all the other data sources in the datatank.
+
+>> CAVEAT: We fetch some meta-data (e.g. paging queries) using a query to the sparql-endpoint with [application/sparql-results+json](http://www.w3.org/TR/sparql11-results-json/) as a format parameter. Also select queries are being retrieved with this given format. Make sure the endpoint supports this.
