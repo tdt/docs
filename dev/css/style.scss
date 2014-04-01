@@ -3,17 +3,39 @@
 
 $primary: #183440;
 $primary-highlight: #3C606E;
-$primary-soft: desaturate(lighten($primary-highlight, 40%), 15%);
+$primary-soft: desaturate(lighten($primary-highlight, 63%), 3%);
 
-$secondary: #DCDBBD;
-$secondary-highlight: lighten($secondary, 16%);
+$background: desaturate(lighten($primary-highlight, 64%), 3%);
 
-$third: #90AB9C;
-$highlight: #90AB9C;
+$border-color: desaturate(lighten($primary-highlight, 52%), 10%);
+$border-color-soft: desaturate(lighten($primary-highlight, 55%), 10%);
 
-$header-height: 60px;
-$footer-height: 60px;
-$footer-border: 2px;
+$button-color: $primary;
+$button-background: desaturate(lighten($primary-highlight, 60%), 15%);
+$button-background-hover: lighten($button-background, 4%);
+$button-border: $border-color;
+$button-border-hover: $button-border;
+
+$button-primary-background: $primary;
+$button-primary-background-hover: lighten($button-primary-background, 10%);
+$button-primary-border: $button-primary-background;
+$button-primary-border-hover: $button-primary-background;
+
+$button-cta-background: #36ab70;
+$button-cta-background-hover: lighten($button-cta-background, 5%);
+$button-cta-border: $button-cta-background;
+$button-cta-border-hover: $button-cta-background-hover;
+
+$text-softer: desaturate(lighten($primary-highlight, 35%), 15%);
+
+$disabled-background: $primary-soft;
+$disabled-color: $text-softer;
+
+$highlight: $button-cta-background;
+
+$header-height: 50px;
+$footer-height: 40px;
+$footer-border: 1px;
 
 @import 'prettify';
 
@@ -26,7 +48,7 @@ html, body{
 }
 
 body {
-    background-color: $secondary-highlight;
+    background-color: $background;
     font-family: 'Open Sans', 'Oswald', sans-serif;
     font-size: 13px;
     line-height: 19px;
@@ -45,21 +67,29 @@ body {
     background-color: $primary;
     box-shadow: 0px none;
     height: $header-height;
+    line-height: $header-height;
     margin-bottom: 0px;
-    font-family: 'Varela Round';
-    font-weight: normal;
+
+    a{
+        border: 0px none;
+    }
 
     .navbar-brand{
         padding-top: 0px;
         padding-bottom: 0px;
-        border-bottom: 0px none;
+        margin-right: 20px;
+        font-family: 'Varela Round';
+        line-height: $header-height;
+
+        &.admin{
+            margin-right: 50px;
+        }
 
         img{
-            width: $header-height -15;
-            height: $header-height - 15;
-            margin: 4px 0px;
-            margin-right: 10px;
-            margin-bottom: 10px;
+            width: $header-height - 24;
+            height: $header-height - 24;
+            margin-right: 5px;
+            margin-top: -1px;
             display: inline-block;
         }
 
@@ -68,6 +98,7 @@ body {
             display: inline-block;
             font-size: 16px;
             color: #fff;
+            line-height:  $header-height;
             font-weight: 100;
             text-transform: uppercase;
         }
@@ -135,7 +166,7 @@ body {
     }
 
     li{
-        color: $primary-soft;
+        color: $text-softer;
         text-transform: uppercase;
     }
 
@@ -148,7 +179,7 @@ body {
 #sidebar-background{
     width: 16.666666666666664%;
     background: #fff;
-    border-right: 1px solid $secondary;
+    border-right: 1px solid $border-color;
     top: 0px;
     bottom: 0px;
     left: 0px;
@@ -157,45 +188,34 @@ body {
 }
 
 .btn{
-    background-color: lighten($secondary, 10%);
-    border: 1px solid darken($secondary, 7%);
-    border-radius: 2px;
-    color: #333;
-
+    background-color: $button-background;
+    border: 1px solid $button-border;
+    border-radius: 0px !important;
+    color: $button-color;
+    font-size: 13px;
     i{
         margin-right: 5px;
     }
 
+    i.icon-only{
+        margin-right: 0px;
+    }
+
     &:focus, &:hover{
-        background-color: lighten($secondary, 15%);
-        border: 1px solid $secondary;
+        background-color: $button-background-hover;
+        border: 1px solid $button-border-hover;
     }
 
     &.btn-primary{
-        background-color: $primary;
+        background-color: $button-primary-background;
+        border: 1px solid $button-primary-border;
         color: #fff;
-        border: 1px solid darken($primary, 7%);
+        font-weight: bold;
 
         &:focus, &:hover{
-            background-color: $primary-highlight;
-            border: 1px solid darken($primary-highlight, 7%);
+            background-color: $button-primary-background-hover;
+            border: 1px solid $button-primary-border-hover;
         }
-    }
-}
-
-input{
-    box-shadow: none !important;
-
-    &:focus{
-        box-shadow: none !important;
-        border: 1px solid $secondary !important;
-        border-bottom: 1px solid $highlight !important;
-    }
-}
-
-.input-group-btn:last-child{
-    .btn{
-        border-left: 0px none;
     }
 }
 
@@ -209,21 +229,19 @@ a{
 }
 
 .well{
-    border: 1px solid $secondary;
+    border: 1px solid $border-color-soft;
     background: #fff;
     box-shadow: none;
 }
-
 
 footer{
     height: $footer-height;
     width: 100%;
     background-color: #fff;
-    color: $primary-soft;
-    border-top: $footer-border solid $secondary;
+    color: $text-softer;
+    border-top: $footer-border solid $border-color;
     line-height: $footer-height - $footer-border;
-    // box-shadow: 0px -2px 0px 0px $secondary;
-    font-size: 11px;
+    font-size: 10px;
     position: relative;
 }
 
@@ -236,20 +254,6 @@ footer{
     margin: 0px;
 }
 
-.table{
-    thead>tr>th {
-        border-bottom: 0px none;
-    }
-
-    tbody{
-        tr:hover{
-            td{
-                background-color: $secondary-highlight !important;
-            }
-        }
-    }
-}
-
 .anchor{
     display: block;
     position: relative;
@@ -258,7 +262,7 @@ footer{
 }
 
 .note{
-    color: $primary-soft;
+    color: $text-softer;
 }
 
 h1{
@@ -301,6 +305,7 @@ blockquote{
     color: #fff;
     border: 0px none;
     margin-top: 15px;
+    padding: 15px !important;
 
     p{
         font-size: 13px !important;
@@ -313,6 +318,15 @@ blockquote{
             float:left;
         }
     }
+
+    a{
+        color: #fff;
+        font-weight: bold;
+    }
+}
+
+pre {
+    border: 1px solid $border-color-soft !important;
 }
 
 @media(max-width:768px){
@@ -345,16 +359,29 @@ blockquote{
 .dropdown-menu {
     margin: 0px;
     padding: 0px;
-    min-width: 100%;
+    min-width: 50%;
     margin-top: -1px !important;
     border-radius: 0px !important;
+    box-shadow: none !important;
 
-    li a{
-        color: $primary !important;
-        text-align: center;
+    li{
+        a{
+            color: $primary !important;
+            text-align: center;
+            padding: 0px 5px !important;
+            line-height: 40px !important;
+            height: 40px !important;
+            border-bottom: 1px solid $border-color-soft !important;
 
-        &:hover, &:focus{
-            color: #fff !important;
+            &:hover, &:focus{
+                color: #fff !important;
+            }
+        }
+
+        &:last-child{
+            a{
+                border-bottom: 0px none !important;
+            }
         }
     }
 }

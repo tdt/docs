@@ -19,8 +19,8 @@ pre .pun { color: lighten($primary-highlight, 15%) }    /* punctuation */
 pre .pln { color: $primary }    /* plaintext */
 pre .tag { color: $primary; font-weight: bold } /* html/xml tag    - lightyellow */
 pre .atn { color: $primary-highlight; font-weight: bold } /* attribute name  - khaki */
-pre .atv { color: $third  } /* attribute value - pink */
-pre .dec { color: $third } /* decimal         - lightgreen */
+pre .atv { color: $highlight  } /* attribute value - pink */
+pre .dec { color: $highlight } /* decimal         - lightgreen */
 
 /* Specify class=linenums on a pre to get line numbering */
 ol.linenums { margin-top: 0; margin-bottom: 0; color:desaturate(lighten($primary-highlight, 30%), 15%);} /* IE indents via margin-left */

@@ -9,7 +9,7 @@ On this page you will learn how to configure:
 
 The configuration is entirely handled by the Laravel framework, if you encounter things that aren't covered on this page, visit the [Laravel configuration documentation](http://four.laravel.com/docs/configuration) or if that doesn't help you out, get in touch with us via e-mail or [github](https://github.com/tdt).
 
->> Ideally, you don't change any files in the app/config directory, but rather copy them into a folder you create under app/config and then edit as you see fit. This allows for proper configuration management and will make your overall configuration flow alot easier. For more info on this, check out the [configuration documentation](http://four.laravel.com/docs/configuration).
+> Ideally, you don't change any files in the app/config directory, but rather copy them into a folder you create under app/config and then edit as you see fit. This allows for proper configuration management and will make your overall configuration flow alot easier. For more info on this, check out the [configuration documentation](http://four.laravel.com/docs/configuration).
 
 The sections below are a summary of what the important parts of the configuration are.
 

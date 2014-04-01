@@ -2,8 +2,6 @@
 
 On this page we will elaborate on how you can publish SPARQL queries.
 
-Make sure to read the caveats as they include some vital information on how the SPARQL readers works, and why it might not work in some cases.
-
 ## Templating
 
 Publishing SPARQL queries is done the same way you would publish any other data source. However, SPARQL queries have some extra flexibility. Since you're passing along SPARQL queries, it's possible to abstract them and replace certain values with variables.
@@ -28,8 +26,7 @@ This query will then be executed to the SPARQL endpoint and the proper response 
 
 > CAVEAT: since hashtags are quite often used in the semantic world, you'll find yourself passing one in as a query string parameter. Make sure you encode it first (%23 = #) before entering it in your URI, the datatank can't fetch it if you don't.
 
-Note that one can add in one URI/request multiple request parameters using the same identifier. Like this: http://foo/sparql?identifier[]=value1&identifier[]=value2.  (Note: The [] behind the identifiers are an essential php-ism).
-SPARQL Query-Resources called upon in this fashion can refer to the distinct values of the resulting array by using indexed placeholders like ${identifier[0]} and ${identifier[1]} in the sparql-definition.
+Note that one can send multiple request parameters with the same identifier like this: http://foo/sparql?identifier=value1&identifier=value2.  In this case the SPARQL definition can refer to the distinct values by using ${identifier[0]} and ${identifier[1]}
 
 ## Semantic vs non-semantic results
 

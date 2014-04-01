@@ -10,9 +10,9 @@ class HomeController extends BaseController {
         $uri = Request::path();
 
         // Default version of the documentation
-        $version = "4.1";
+        $version = "4.2";
         $page = 'introduction';
-        $versions = array("4.0", "4.1");
+        $versions = array("4.0", "4.1", "4.2");
 
         // If not the root, then split the uri to find the content
         $segment1 = Request::segment(1);
