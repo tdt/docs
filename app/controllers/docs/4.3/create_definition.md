@@ -23,6 +23,7 @@ The discovery document shows a list of methods that one can perform on the resou
 {
     "protocol": "rest",
     "rootUrl": "http://foo/api",
+    "version" : "x.x"
     "resources": {
         "definitions": {
             "methods": {
@@ -35,7 +36,7 @@ The discovery document shows a list of methods that one can perform on the resou
                     "httpMethod": "PUT",
                     "path": "/definitions/{identifier}",
                     "description": "Add a resource definition identified by the {identifier} value,. The {identifier} consists of 1 or more collection identifiers, followed by a final resource name. (e.g. world/demography/2013/seniors). Valid characters that can be used are alphanumerical, underscores and whitespaces.",
-                    "contentType": "application/tdt.definitions+json",
+                    "contentType": "application/tdt.definition+json",
                     "mediaType": {
                         "csv": {
                             "description": "Create a definition that allows for publication of data inside a Csv datastructure.",
