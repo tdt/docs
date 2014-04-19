@@ -5,7 +5,7 @@ On this page you will learn
 * [What different data sources are supported](#source_types)
 * [How to create your own source type](#create_source_type)
 
-Note that this documentation is primarely targets technical people.
+Note that this documentation primarely targets technical people.
 
 <a id='source_types' class='anchor'></a>
 ## Data sources
