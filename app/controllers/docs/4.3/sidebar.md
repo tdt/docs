@@ -26,5 +26,7 @@
 	- [Introduction]({url}/input)
 	- [Usage]({url}/input_usage)
     - [Management]({url}/input_management)
+- Triples
+    - [Introduction]({url}/triples_introduction)
 - Changelog
     - [Overview]({url}/changelog)
