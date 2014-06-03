@@ -13,7 +13,7 @@ class HomeController extends BaseController
 
         // Default version of the documentation
         $page = 'introduction';
-        $versions = array("4.0", "4.1", "4.2", "4.3");
+        $versions = array("4.0", "4.1", "4.2", "4.3", "4.6");
         $version = end($versions);
 
         // If not the root, then split the uri to find the content
