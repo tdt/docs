@@ -6,7 +6,6 @@ On this page we will elaborate more on some specifics about source types and cer
 * [Shp source type](#shp)
 * [Sparql source type](#sparql)
 * [Xml source type](#xml)
-* [Map (geo) properties](#map)
 
 There are some side-notes to be made with the requesting of data be it in certain formats, or from certain source types.
 
@@ -130,10 +129,3 @@ This will be represented in PHP (and possibly JSON in any XML to JSON converter)
             </element>
         </person>
     </persons>
-
-<a id="map" class="anchor"></a>
-## Set Geo properties
-
-One of our visualizations is a map that displays geographical properties through an OSM (openstreet map) layer. All tabular datasets will be scanned for geographical key-names such as long, lng, longitude, etc. to display the properties automatically. However if these properties have a different name (e.g. my_longitude) you can pass these along with the API. The property that provides this functionality is called "map\_property", which takes a string value that represents the name of the property (e.g. my\_longitude).
-
-This can also be altered through our user interface.
