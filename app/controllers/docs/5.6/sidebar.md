@@ -19,7 +19,6 @@
 - Consuming data
     - [Basic Usage]({url}/consuming_data)
     - [Notes]({url}/notes)
-    - [Spectql]({url}/spectql)
 - User Interface
     - [Introduction]({url}/ui_introduction)
 - Input
