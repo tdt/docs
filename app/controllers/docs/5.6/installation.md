@@ -54,7 +54,7 @@ Set the rewrite rules in <code>/etc/apache2/sites-available/default</code> to <c
 
 >> CAVEAT: When using Shared hosting, you might run into the issue that authentication headers are not set!! Do the following if you experience issues.
 
->> When using Shared Hosting, some PHP Authentication headers might not be in use, this is essential though, as we use them in our application. Therefore, to resolve this, add the following to your .htaccess
+When using Shared Hosting, some PHP Authentication headers might not be in use, this is essential though, as we use them in our application. Therefore, to resolve this, add the following to your .htaccess
 
     RewriteEngine on
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
