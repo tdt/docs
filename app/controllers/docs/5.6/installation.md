@@ -13,13 +13,16 @@ The DataTank requires a server with
 * Apache2 or Nginx
 * mod rewrite enabled
 * PHP 5.4 or higher
+* Mcrypt installed and enabled
 * Git
 * Any database supported by [Laravel 4](http://laravel.com/docs/4.0/database)
 
 If you're using a <strong>Unix</strong> system that supports the <strong>apt-get</strong> package manager, the easiest way to meet these requirements is to perform the following commands:
 
-    $ apt-get install apache2 php5 mysql-server php5-dev php5-memcache memcached php5-curl
+    $ apt-get install apache2 php5 mysql-server php5-dev php5-memcache memcached php5-curl php5-mcrypt
     $ a2enmod rewrite
+    $ php5enmod mcrypt
+    $ service apache2 restart
 
 If you're using a <strong>Linux</strong> distribution derived from the Red Hat family, or which uses the <strong>yum</strong> package manager, you may need to follow the [CentOS 6](installation_centos6) installation instructions.
 
