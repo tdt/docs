@@ -23,17 +23,14 @@ If you're using a <strong>Unix</strong> system that supports the <strong>apt-ge
     $ a2enmod rewrite
     $ php5enmod mcrypt
     $ pecl install dbase
+    $ php5enmod dbase
     $ service apache2 restart
 
 If you're using a <strong>Linux</strong> distribution derived from the Red Hat family, or which uses the <strong>yum</strong> package manager, you may need to follow the [CentOS 6](installation_centos6) installation instructions.
 
 If you're using a <strong>Windows</strong> system, you'll have to download a web stack that holds the necessary requirements, such as [WAMPServer](http://www.wampserver.com/en/), plus [msysgit](http://msysgit.github.io/).
 
-<<<<<<< HEAD
-In both cases don't forget to add the dbase.so dependency to the php.ini file, this is necessary to process SHP files.
-=======
 If you're using a <strong>Mac</strong> system, you'll have to download a web stack which contains the necessary requirements, such as [XAMPP](https://www.apachefriends.org/index.html).
->>>>>>> 1217129aa92d467ec52212f7f37048815ed18aac
 
 Set the rewrite rules in <code>/etc/apache2/sites-available/default</code> to <code>ALL</code>:
 
