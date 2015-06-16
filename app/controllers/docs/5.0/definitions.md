@@ -176,6 +176,9 @@ The php snippet below will patch up the definition description of the resource i
 // Initiate the curl request
 $ch = curl_init();
 
+// Define our definition uri
+$url = "http://foo/api/definitions/trees/2011";
+
 // Construct the meta-data properties
 $patch = array(
     "description" : "Updated description about the resource trees/2011.",
@@ -183,7 +186,7 @@ $patch = array(
 
 // Create the general configurations for the curl request
 $options = array(
-    CURLOPT_CUSTOMREQUEST => "PUT",
+    CURLOPT_CUSTOMREQUEST => "PATCH",
     CURLOPT_URL => $url,
     CURLOPT_HTTPAUTH => CURLAUTH_ANY,
     CURLOPT_USERPWD => "foo" . ":" . "bar",
@@ -191,7 +194,7 @@ $options = array(
     CURLOPT_RETURNTRANSFER => 1,
     CURLOPT_FORBID_REUSE => 1,
     CURLOPT_TIMEOUT => 4,
-    CURLOPT_POSTFIELDS => json_encode($put),
+    CURLOPT_POSTFIELDS => json_encode($patch),
 );
 
 // Set the configuration of the curl request
