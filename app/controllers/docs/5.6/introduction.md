@@ -33,5 +33,3 @@ The documentation that you can find through the sidebar is relevant for the [inp
 
 
 In short, if you have for example a CSV file with locations of parking lots, you can display them on a map with few clicks using our platform, and provide a JSON, XML, ... feed to end-users at the same time!
-
-You can try it out instantly by using our [pagodabox set-up](https://pagodabox.com/cafe/pietercolpaert/thedatatank) to have your own free instant datatank!
