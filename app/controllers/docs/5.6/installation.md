@@ -16,6 +16,7 @@ The DataTank requires a server with
 * Mcrypt installed and enabled
 * Git
 * Any database supported by [Laravel 4](http://laravel.com/docs/4.0/database)
+* dbase PHP extension
 
 If you're using a <strong>Unix</strong> system that supports the <strong>apt-get</strong> package manager, the easiest way to meet these requirements is to perform the following commands:
 

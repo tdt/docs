@@ -20,7 +20,6 @@ Our repositories are divided by functionality on github, for example the documen
 * [core](https://github.com/tdt/core)
 * [input](https://github.com/tdt/input)
 * [docs](https://github.com/tdt/docs)
-* [streamingrdfmapper](https://github.com/tdt/streamingrdfmapper)
 
 The rest of the packages hosted in the tdt repository will become obsolete - from version 4.0.0 on - as most of them are either included in core, or are no longer relevant due to the migration to the [Laravel framework](http://laravel.com/) framework.
 
