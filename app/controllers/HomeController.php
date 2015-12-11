@@ -4,7 +4,6 @@ use \Michelf\Markdown;
 
 class HomeController extends BaseController
 {
-
     public function handleRequest()
     {
 
@@ -13,7 +12,7 @@ class HomeController extends BaseController
 
         // Default version of the documentation
         $page = 'introduction';
-        $versions = array("4.0", "4.1", "4.2", "4.3", "4.6", "5.0", "5.6");
+        $versions = array("4.0", "4.1", "4.2", "4.3", "4.6", "5.0", "5.6", "5.12");
         $version = end($versions);
 
         // If not the root, then split the uri to find the content
@@ -32,7 +31,6 @@ class HomeController extends BaseController
         $page = __DIR__ . '/docs/' . $version . '/' . $page . '.md';
 
         if (file_exists($page)) {
-
             $contents = file_get_contents($page);
             $sidebar = file_get_contents(__DIR__ . '/docs/' . $version . '/sidebar.md');
 
