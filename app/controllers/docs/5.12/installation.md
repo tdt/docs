@@ -21,7 +21,7 @@ The DataTank requires a server with
 
 If you're using a <strong>Unix</strong> system that supports the <strong>apt-get</strong> package manager, the easiest way to meet these requirements is to perform the following commands:
 
-    $ apt-get install apache2 php5 mysql-server php5-dev php5-memcache memcached php5-curl php5-mcrypt
+    $ apt-get install apache2 php5 mysql-server php5-dev php5-memcached memcached php5-curl php5-mcrypt
     $ a2enmod rewrite
     $ php5enmod mcrypt
     $ service apache2 restart
