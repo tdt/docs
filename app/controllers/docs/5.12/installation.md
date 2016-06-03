@@ -88,7 +88,7 @@ After that you're ready to make composer work his magic! Run the following comma
 
 
     $ composer install
-    $ composer update
+    $ gulp
 
 #### Add permissions to the log directory
 
