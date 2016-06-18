@@ -4,3 +4,7 @@ composer.phar
 composer.lock
 .DS_Store
 Thumbs.db
+
+# IDE files
+.idea
+.idea/*
