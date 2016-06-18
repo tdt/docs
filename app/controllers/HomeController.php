@@ -6,13 +6,9 @@ class HomeController extends BaseController
 {
     public function handleRequest()
     {
-
-        // TODO create "page not found" page
-        $uri = Request::path();
-
         // Default version of the documentation
         $page = 'introduction';
-        $versions = array("4.0", "4.1", "4.2", "4.3", "4.6", "5.0", "5.6", "5.12");
+        $versions = array("4.0", "4.1", "4.2", "4.3", "4.6", "5.0", "5.6", "5.12", "6.6");
         $version = end($versions);
 
         // If not the root, then split the uri to find the content
