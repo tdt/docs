@@ -107,9 +107,14 @@ This will publish some data sets to some self-explanatory uri's. For example CSV
 
 #### Get started with our user interface
 
-We've created a user interface to manage datasets and users on the uri api/admin, relative to the root uri. The default credentials are:
+We've created a user interface to manage datasets and users on the uri api/admin, relative to the root uri.  The default credentials for the admin user are:
 
     user: admin
     password: admin
+
+If no users were automatically created during the install you can create an initial admin user with the following command:
+
+    php artisan db:seed --class=UserSeeder
+
 
 Best practice is to change the admin password immediately by editing it using the user interface. Click the question mark <i class='fa fa-lg fa-question-circle'></i> in the user interface to start the help guide.
